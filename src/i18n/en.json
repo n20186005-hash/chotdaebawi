@@ -1,0 +1,827 @@
+{
+  "meta": {
+    "title": "Chuam Chotdaebawi Rock (추암 촛대바위) | Donghae, Gangwon-do · Korea's Iconic Candlestick Sea Rock & Sunrise Spot",
+    "description": "The complete guide to Chuam Chotdaebawi Rock (추암 촛대바위): a naturally formed candlestick-shaped sea stack rising from the sea off Chuam Beach, Donghae-si, Gangwon-do. Famous as the backdrop of the first line of Korea's national anthem and as a representative East Coast sunrise spot. Opening hours, transport, legends, photo spots and visitor reviews — all in one place."
+  },
+  "header": {
+    "siteName": "Chuam Chotdaebawi Rock",
+    "home": "Home",
+    "visit": "Visit",
+    "transport": "Getting There",
+    "lodging": "Stay",
+    "history": "History",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "map": "Map",
+    "backToHome": "Back to Home"
+  },
+  "common": {
+    "changeLanguage": "Change language",
+    "toggleTheme": "Toggle theme"
+  },
+  "nonprofitBanner": {
+    "text": "This is an independent, non-profit guide compiled by travel enthusiasts to provide the most objective information about visiting Chuam Chotdaebawi Rock. It is free, and we are affiliated with no organization.",
+    "dataSource": "All attraction information on this site is cross-checked against public materials from the Korea Tourism Organization (VISITKOREA), Donghae City Hall and the Gangwon Special Self-Governing Province, with no commercial recommendations."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "text": "So that every traveler visiting Donghae can experience this candlestick rock rising from the sea, we have organized scattered official information into this guide — only to give you the purest sunrise, sea breeze and legend."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "region": "Gangwon-do",
+    "city": "Donghae",
+    "current": "Chuam Chotdaebawi Rock"
+  },
+  "stickyNav": {
+    "facts": "Key Facts",
+    "etiquette": "Coastal Etiquette",
+    "route": "Half-Day Route",
+    "transport": "Getting There",
+    "lodging": "Stay",
+    "visit": "Visit Tips",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Chuam Chotdaebawi Rock (추암 촛대바위)",
+    "subtitle": "A naturally formed candlestick-shaped sea stack rising from the waters off Donghae, Gangwon-do — one of Korea's most iconic sunrise spots. A lone pine crowns the pillar, keeping watch with the 'Grandmother Rock'; it appears as the backdrop of the first line of Korea's national anthem and lives in the shared memory of countless Koreans.",
+    "rating": "4.4 (10,370)",
+    "reviewCount": "10,370 reviews",
+    "hours": "Open 24 hours (public seaside area)",
+    "openMaps": "View location on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9",
+    "tags": ["Candlestick sea rock", "Anthem backdrop", "Free · public coast"],
+    "routeCta": {
+      "label": "Plan your route",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Learn its story",
+      "href": "#history"
+    },
+    "quickFacts": [
+      { "icon": "🪨", "label": "Highlights", "value": "Candlestick sea rock" },
+      { "icon": "🆓", "label": "Admission", "value": "Free" },
+      { "icon": "🕐", "label": "Open", "value": "24 hours" }
+    ],
+    "navCta": { "label": "📍 Navigate", "href": "#transport" },
+    "photoCta": { "label": "📸 Photo spots", "href": "#gallery" },
+    "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" },
+    "sunsetPlanner": {
+      "eyebrow": "Golden Hour Calculator · Light Tool",
+      "title": "Based on today's sunset, we suggest arriving about 60 minutes earlier to catch both the softest diffuse light and the blue-hour seascape.",
+      "note": "The rock faces due east; soft front-light is best from early morning to noon. On peak summer weekends, allow extra time to avoid the crowds.",
+      "seaGlare": "Sea Glare correction: Chuam faces the east sea, so at dawn the pillar is back-lit in silhouette while the sea glows gold-red; from morning to noon it turns front-lit and the rock and pine detail are clearest — the golden window to frame 'candle – pine – sea' together.",
+      "arriveLabel": "Suggested arrival",
+      "blueHourLabel": "Blue hour"
+    }
+  },
+  "quickFactsDashboard": {
+    "title": "Chuam Chotdaebawi at a Glance · Data Board",
+    "subtitle": "A few numbers to understand this candlestick-shaped sea stack above the East Sea.",
+    "items": [
+      { "icon": "📏", "label": "Pillar height / Height", "value": "about 10 m", "note": "The rock rises about 10 m from the sea, crowned by a sturdy red pine — like a giant candlestick planted in the East Sea. It is one of Korea's most photogenic sea stacks." },
+      { "icon": "🌅", "label": "Sunrise / Sunrise", "value": "Sea sunrise", "note": "Facing the open east sea, it is a representative Gangwon 'sun-greeting' (해맞이) spot; every New Year's dawn crowds come to welcome the first light." },
+      { "icon": "🎬", "label": "Anthem / Anthem", "value": "Aegukga backdrop", "note": "Chuam Chotdaebawi is the seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i' — a symbol beyond scenery, written into national memory." },
+      { "icon": "🆓", "label": "Admission / Admission", "value": "0 KRW", "note": "A public seaside area, free and open long-term, no ticket or reservation; public parking and a sea-view walkway are provided." },
+      { "icon": "📍", "label": "Location / Location", "value": "37°28′N, 129°10′E", "note": "Plus Code: F5H6+P2 Donghae. At the north end of Chuam Beach, next to Chuam Suspension Bridge and Grandmother Rock." },
+      { "icon": "🌉", "label": "Nearby / Nearby", "value": "Chuam Bridge", "note": "The Chuam Suspension Bridge (출렁다리), about 72 m long, opened in 2024 across the sea, linking the rock, Grandmother Rock and the coastal trail into one popular route." }
+    ]
+  },
+  "hiddenRules": {
+    "title": "Coast & Rock Safety Tips",
+    "subtitle": "The hard part of Chuam is not finding the way, but remembering 'this is a public coast shared with the sea'. Think about tides, wind and rock safety, and the experience upgrades from 'rushing check-ins' to 'relaxed play'.",
+    "highlights": [
+      { "icon": "🌊", "label": "Water safety", "value": "Watch the surf", "note": "The pillar stands in the sea with strong currents and slippery reefs nearby; do not climb the rock or enter the water — view from the walkway and safe zones." },
+      { "icon": "☀️", "label": "Sun & wind", "value": "Strong UV", "note": "Coastal UV is strong and sea breeze hides dehydration; reapply sunscreen, wear a hat and drink water on long exposures." },
+      { "icon": "🚸", "label": "Families & seniors", "value": "Keep it gentle", "note": "Chuam Beach has soft, gently sloped sand suited to family wading, but reefs are slippery — watch children and avoid wet rocks at high tide." }
+    ],
+    "panels": [
+      {
+        "q": "Can I approach or climb the rock?",
+        "a": "No. Chotdaebawi is a protected sea stack surrounded by sea and reef; climbing, carving or crossing rails is strictly forbidden. Best view is from the shore walkway, Chuam Bridge or the Grandmother Rock observatory.",
+        "items": ["Use the designated walkway and viewing platforms.", "Water level changes greatly with tides; do not linger on reef rocks below the pillar."]
+      },
+      {
+        "q": "Why be careful around reefs and the bridge?",
+        "a": "Reefs below the pillar are slippery with hidden currents even when calm; the Chuam Suspension Bridge is a swinging sea bridge — hold the handrail, do not run or shake it, and follow on-site guidance."
+      },
+      {
+        "q": "Can I light a fire or set off fireworks on the coast?",
+        "a": "No. Open fires and private fireworks are strictly prohibited on the public coast; enjoy the sunrise and night view in designated areas and follow staff instructions."
+      }
+    ]
+  },
+  "complianceGuide": {
+    "title": "Chuam · Coastal Etiquette & Public Environment Guide",
+    "subtitle": "This is both a visitor's coast and the citizens' daily seaside stroll. Following these rules is respect for both people and the ocean.",
+    "rules": [
+      {
+        "badge": "🚮",
+        "title": "Take your trash with you",
+        "text": "Coastal bins are limited and sea wind scatters litter; bring a small bag and take everything away, especially cigarette butts, plastics and food waste."
+      },
+      {
+        "badge": "🔇",
+        "title": "Enjoy quietly",
+        "text": "Many come specifically for sunrise and the sea rock; lower your voice and don't blast music, leaving the calm to the sea and sky."
+      },
+      {
+        "badge": "🚭",
+        "title": "No smoking & fire-free",
+        "text": "Dry sand and vegetation are flammable; the whole area is smoke-free and open flames are banned, especially on wooden structures like the Chuam Bridge."
+      },
+      {
+        "badge": "🐚",
+        "title": "Protect the coastal ecology",
+        "text": "Do not dig up or take sand and shells, and do not disturb shorebirds and tidal creatures; leaving the coast as it is is the most basic respect for the ocean."
+      }
+    ]
+  },
+  "higashiyamaRoute": {
+    "title": "Custom Itinerary: Chuam Coast Half-Day Loop",
+    "subtitle": "Not just 'who it suits', but a walkable half-day route. Centered on Chotdaebawi, it links Chuam Bridge, Grandmother Rock and Chuam Beach.",
+    "steps": [
+      { "title": "[Start] Chuam Beach stroll & wading", "meta": "Coast · ~40 min", "text": "Gather supplies and use the restroom on the soft sand, stroll and wade along the Chuam coast, leaving the soft morning light for the sea and distant hills.", "tips": ["Gently sloped coast, good for warm-up and photos."] },
+      { "title": "[Main] Chotdaebawi & Grandmother Rock", "meta": "Core experience · ~40 min", "text": "Walk the trail to the best rock viewpoint, look up at the candle rock crowned by a lone pine, and frame it with the facing Grandmother Rock — reading the century-old legend of watchful waiting.", "tips": ["The rock silhouette is most beautiful around sunrise; schedule this segment early."] },
+      { "title": "[Extend] Chuam Suspension Bridge (출렁다리)", "meta": "Sea trail · ~30 min", "text": "Walk to the 2024 Chuam Suspension Bridge and look down at the candle rock and open East Sea from the 72 m swinging sea trail.", "tips": ["The bridge sways gently; hold on and do not run."] },
+      { "title": "[Refuel] Donghae city food", "meta": "Food stop · ~50 min", "text": "Leave the coast for Donghae city to taste Gangwon seafood, squid and local snacks, linking the coast trip to local flavors.", "tips": ["If the coast is crowded, have dinner in the city to avoid the rush."] },
+      { "title": "[End] Sunset or return", "meta": "Wrap · ~60 min+", "text": "If time allows, return to Chuam at dusk for the coast lights, or take a bus / taxi back, wrapping this into a complete 'rock + bridge + food' half-day package.", "tips": ["In peak season, treat the market and night view as flexible add-ons."] }
+    ],
+    "disclaimer": "The route emphasizes a closed loop that 'works even if you just follow it'; if you only want the rock, keep the first two segments and treat food and night view as flexible add-ons."
+  },
+  "intro": {
+    "title": "Getting to Know Chuam Chotdaebawi Rock",
+    "description": "Chuam Chotdaebawi Rock (추암 촛대바위) sits at the north end of Chuam Beach, Donghae-si, Gangwon-do — a naturally formed sea stack rising about 10 m from the sea and crowned by a red pine. 'Chotdaebawi' means 'candlestick stone', named for its resemblance to a giant candlestick planted in the sea. Beside it stand a dozen other fantastically shaped rocks, and across the water the 'Grandmother Rock' (해안정) keeps watch. More importantly, it holds a rare public narrative: how a lone sea rock became the seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i', and how it carries a city and a nation's sunrise ritual and collective memory.",
+    "visitGuide": {
+      "title": "Visit Guide",
+      "eyebrow": "Practical Planning",
+      "description": "Chuam is a free, open public coast with no gate and no reservation. The ideal approach is usually not 'wander by day' but reverse-planning around light: come at dawn for sunrise, leave the front-lit morning-to-noon for the rock and pine, and enjoy the coast lights at night. Facilities are restrained and commercial feel is low — which is exactly its charm.",
+      "items": [
+        "Best at dawn sunrise or morning front-light: the east sea is warmest then, framing the candle rock and pine best.",
+        "Best viewpoints are the north-end rock-view walkway and the higher deck of Chuam Bridge.",
+        "About a 5–10 min walk from the coast to Chuam Bridge and the Grandmother Rock observatory.",
+        "Almost no commercial supply on the coast; water, restrooms and breaks are better at the entrance or nearby."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "A naturally formed candlestick sea stack crowned by a sturdy red pine",
+        "The seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i'",
+        "Facing due east, a representative Gangwon New Year sunrise (해맞이) spot",
+        "Keeping watch with the 'Grandmother Rock', a century-old legend of waiting",
+        "Next to the 2024 Chuam Suspension Bridge (출렁다리), free and open"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "Transportation & Getting Here",
+    "subtitle": "Combine arriving in Donghae, city transfers, walking/cycling, parking and charging into one clear structure for planning your Chuam trip.",
+    "overviewTitle": "After arriving in Donghae",
+    "overviewText": "Chuam Chotdaebawi Rock is at the north end of Chuam Beach, Donghae-si, Gangwon-do, next to Donghae Station and Chuam Station — a representative coastal wonder of Donghae. The easiest long-distance option is KTX to Donghae Station from Seoul (~2.5 h), or transfers from Seoul or Gangneung; once in the city, the rock is about a 15 min drive from Donghae Station. Chuam is an open public coast; from Chuam Station it is about a 5 min walk to the rock-view walkway.",
+    "overviewText2": "Chuam is open coast with no gate. Plan transport, parking and walking together — especially with seniors, children or luggage, parking at a public lot then walking in saves a lot of hassle.",
+    "arrivalTitle": "Remember before departure",
+    "arrivalItems": [
+      "Chuam is in Chuam-dong, Donghae; about a 15 min taxi from Donghae Station.",
+      "Several public parking lots surround the coast; they fill fast on peak weekends — arrive early or prefer transit.",
+      "Crowds are heavy on weekends and holidays; strongly prefer public transit or off-peak visits."
+    ],
+    "modes": [
+      {
+        "label": "Train (KTX / Donghae Station)",
+        "icon": "🚆",
+        "title": "KTX direct to Donghae Station",
+        "description": "Easiest for most long-distance travelers; KTX / trains from Seoul, Daejeon, Daegu and Gangneung reach Donghae Station directly.",
+        "details": [
+          "KTX from Seoul Station to Donghae Station, about 2.5 h.",
+          "Transfer at Gangneung to Donghae about 40 min, frequent service.",
+          "Use T-money / transport card for easy bus and taxi connections."
+        ],
+        "steps": [
+          { "n": "1", "t": "Take KTX / train to Donghae Station." },
+          { "n": "2", "t": "Transfer to city bus or taxi to Chuam." },
+          { "n": "3", "t": "About a 15 min ride from Donghae Station to the coast." }
+        ]
+      },
+      {
+        "label": "Public transit (express / intercity bus)",
+        "icon": "🚌",
+        "title": "Seoul direct express bus to Donghae",
+        "description": "Easiest for most travelers; Seoul, Gangneung and Wonju have direct express / intercity buses to Donghae.",
+        "details": [
+          "From Seoul Express Bus Terminal (Gangnam) take a 'Donghae' bus, about 2.5–3 h.",
+          "After arriving at Donghae Intercity Bus Terminal, take a city bus or taxi to Chuam.",
+          "Buses accept T-money; use a map app for real-time arrivals."
+        ],
+        "steps": [
+          { "n": "1", "t": "Take express / intercity bus directly to Donghae Terminal." },
+          { "n": "2", "t": "Transfer to city bus or taxi to Chuam." },
+          { "n": "3", "t": "Walk from the entrance into the rock-view walkway." }
+        ]
+      },
+      {
+        "label": "Chuam Station (5 min walk)",
+        "icon": "🚉",
+        "title": "The hidden nearest option",
+        "description": "Chuam Station is the closest station to the rock; a 5 min walk from the platform reaches the rock-view walkway — ideal for light packers who want to see it first.",
+        "details": [
+          "Chuam Station is a small station with some stopping services; check the timetable in advance.",
+          "Follow the coastal signs about a 5 min walk to the rock viewing area.",
+          "Best at dawn and on weekdays to avoid the transfer crowds at Donghae Station."
+        ],
+        "steps": [
+          { "n": "1", "t": "Alight at Chuam Station by train." },
+          { "n": "2", "t": "Walk along the coast signs about 5 min." },
+          { "n": "3", "t": "Reach the Chotdaebawi rock-view walkway." }
+        ]
+      },
+      {
+        "label": "Driving (parking / charging)",
+        "icon": "🅿️",
+        "title": "Via highway · nearby parking",
+        "description": "Good with children, seniors, lots of luggage or a Gangwon tour; several public lots surround the coast.",
+        "details": [
+          "Set destination to '추암 촛대바위' or address '강원특별자치도 동해시 촛대바위길 28'.",
+          "Coast public parking about 1,000 KRW / hour, daily cap about 5,000 KRW (2024 basis); still fills in peak season.",
+          "Some public lots have EV chargers; coastal wind is strong, mind crosswinds and parking."
+        ],
+        "steps": [
+          { "n": "1", "t": "Navigate to 'Chuam Chotdaebawi Rock' or 'Chuam Beach parking'." },
+          { "n": "2", "t": "Park in a public / paid lot, walk to the coast." },
+          { "n": "3", "t": "Avoid the 10:00–18:00 peak to save parking time." }
+        ]
+      },
+      {
+        "label": "Taxi / ride-hail",
+        "icon": "🚕",
+        "title": "Door-to-door",
+        "description": "Easiest with luggage, children/seniors or early / late arrivals.",
+        "details": [
+          "Taxi from Donghae Station or city to Chuam about 15 min, roughly 8,000–12,000 KRW (meter based).",
+          "Walk from the coast entrance to the shore.",
+          "Taxis queue on peak days and in rain/snow; reserve via a local app (e.g. Kakao T)."
+        ],
+        "steps": [
+          { "n": "1", "t": "Call a car via Kakao T etc." },
+          { "n": "2", "t": "Tell the driver '추암 촛대바위'." },
+          { "n": "3", "t": "Alight at the coast entrance, walk in." }
+        ]
+      },
+      {
+        "label": "Cycling / walking",
+        "icon": "🚲",
+        "title": "Coastal greenway & beach stroll",
+        "description": "The most relaxing way to feel Donghae's coast and city.",
+        "details": [
+          "The coast links on foot to Chuam Bridge and the Grandmother Rock observatory.",
+          "Park bikes at the park racks; no riding on sand or the bridge.",
+          "About a 5–10 min walk from the coast to Chuam Bridge, sea views throughout."
+        ],
+        "steps": [
+          { "n": "1", "t": "Stroll the coast or rent a public bike at Chuam / the bay." },
+          { "n": "2", "t": "Walk the greenway toward Chuam Bridge." },
+          { "n": "3", "t": "Lock the bike at the bridge entrance, walk up to view the rock." }
+        ]
+      },
+      {
+        "label": "Walking (neighborhood roam)",
+        "icon": "🚶",
+        "title": "From parking to sand",
+        "description": "If already in Donghae or near the coast, walking is the natural way to observe the coast-city transition.",
+        "details": [
+          "About a 3–10 min walk from surrounding public lots to the rock-view walkway.",
+          "Pass coast, green space and snacks along the way.",
+          "Sand has slight slopes; wear comfortable shoes and watch children."
+        ]
+      }
+    ],
+    "parking": {
+      "title": "Parking & Charging Overview",
+      "note": "Several public parking lots surround Chuam; below are the nearest main options. Rates and availability vary by season and time — follow on-site signs (2024 basis: small car about 1,000 KRW / hour, daily cap about 5,000 KRW).",
+      "colOption": "Option",
+      "colDistance": "Distance",
+      "colPrice": "Price",
+      "options": [
+        { "name": "Chuam Beach public parking", "distance": "about 100–300 m (to rock walkway)", "price": "Public paid, lower rate, fills in peak" },
+        { "name": "Chuam Bridge parking", "distance": "about 300–500 m", "price": "Park annex parking, more spaces but tight in peak" },
+        { "name": "Surrounding street parking", "distance": "about 200–500 m", "price": "Roadside / small lots, few spaces, easier off-peak" },
+        { "name": "Donghae city parking", "distance": "about 1.5–2.5 km", "price": "City / mall parking, tight on holidays" },
+        { "name": "Drop-off (coast entrance)", "distance": "about 100 m", "price": "Short stop only, no spaces" }
+      ],
+      "disclaimer": "Coast roads are extremely congested on holidays and peak season; do not block bus and fire lanes. EV chargers are common at seaside public lots and Chuam Bridge parking; rates and limits may change — check posted signs."
+    },
+    "driverFaqTitle": "Transport Q&A",
+    "driverFaq": [
+      { "q": "Is there parking near Chuam?", "a": "Several public lots surround the coast, such as Chuam Beach public parking and Chuam Bridge parking, within walking distance. They fill fast on peak weekends — arrive early or park further out and walk the last stretch." },
+      { "q": "What is the nearest parking?", "a": "Chuam Beach public parking is about 100–300 m away, the closest to the rock walkway; Chuam Bridge parking is about 300–500 m, more spaces but tight in peak." },
+      { "q": "Is there roadside parking nearby?", "a": "Very little. Coast roads are narrow and congested on holidays; use proper lots and public transit, no long roadside parking." },
+      { "q": "Is driving recommended for Chuam?", "a": "Unless parking is essential, driving is not advised. Weekends and peak season are very congested; walking or transit is smoother. If driving, park at a surrounding lot then walk in." },
+      { "q": "Do you recommend public transit?", "a": "Strongly. Take KTX / express bus to Donghae, then city bus or taxi to Chuam and walk in. Address: 28 Chotdaebawi-gil, Donghae-si, Gangwon-do, South Korea." },
+      { "q": "What is the best way to get here?", "a": "For stability and ease, transit is still best: KTX / express bus to Donghae, transfer to the coast then walk in. If you must drive, treat parking and transfer as part of the trip, not 'park at the door'." }
+    ],
+    "localTipsTitle": "Practical tips",
+    "localTips": [
+      "Dawn sunrise remains the golden window, but set your baseline as 'arrive 30–60 min before sunrise', not 'arrive at the entrance'.",
+      "Crowds are high on weekends and summer break; allow buffer and off-peak time with kids or gear.",
+      "Chuam pairs best with Chuam Bridge, Grandmother Rock and Donghae seafood street; a single stop underestimates its coastal value."
+    ],
+    "mapsCta": "View map & route",
+    "mapsUrl": "https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9",
+    "bestTime": {
+      "title": "Best time to arrive",
+      "text": "Chuam is accessible all day, but the photo ceiling is the dawn sunrise window. Arrive about 30–60 min before sunrise; if weather is poor for the sea, shift focus to Chuam Bridge, Donghae city food or nearby Gangneung / Samcheok coastline."
+    }
+  },
+  "officialManagement": {
+    "title": "About This Coast",
+    "text": "Chuam Chotdaebawi Rock lies at Chuam Beach, Donghae-si, Gangwon-do — a city sea-rock coast grown from a former fishing-port shore, maintained as public space by Donghae City and the Gangwon Special Self-Governing Province. It has long been an open place for citizens' strolls, travelers' sea views and New Year's first light, and is one of Donghae's 'rock and sea' city cards."
+  },
+  "humanities": {
+    "title": "Humanities & Coastal-Rock Research",
+    "subtitle": "Put the fishing-port past, anthem backdrop, sunrise ritual and watch legend on one timeline to truly understand why this rock is more than 'pretty stone'."
+  },
+  "knowledge": {
+    "title": "Chuam Chotdaebawi's History & Name Origins",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Name & past: a fishing-village shore by the East Sea",
+        "content": "'Chuam (추암)' combines 'chu (杻, reef / cape)' and 'am (岩, rock)', originally referring to a reef cape on the Donghae coast. Before becoming a famous rock coast, it was an ordinary fishing-village shore with boats and sea breeze; as Donghae grew from a fishing port into a tourist city, this sea stack was gradually brought into the shared view of citizens and travelers."
+      },
+      {
+        "id": "name",
+        "title": "The name 'Chotdaebawi': a candle flame on the sea",
+        "content": "As the name suggests, Chotdaebawi is 'the candlestick stone'. It rises about 10 m from the sea, crowned by a sturdy red pine, like a giant candlestick planted in the East Sea waiting to be lit. The name hides both the geographical gene of a reef cape and a city character that faces the sea and keeps silent watch."
+      },
+      {
+        "id": "port",
+        "title": "Fishing port & shipping: Donghae's past",
+        "content": "Donghae has long been a port city of Gangwon facing the East Sea (Sea of Japan); catch and shipping were once its most vivid colors. The Chuam area next to the harbor was a vibrant front of fishery and shipping; now famous for sea rocks, sunrise and coastline, the fishing DNA still faintly settles in the sea breeze."
+      },
+      {
+        "id": "anthem",
+        "title": "Anthem backdrop: Dong-hae mul-gwa Baek-du-san-i",
+        "content": "Chuam Chotdaebawi's most widely known identity is as the seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i' (East Sea water and Baekdu Mountain). When the camera sweeps across the candle rock and pine on the sea, this East Sea imagery was written into the first lesson of national awakening — making a sea rock transcend scenery into a footnote of national memory."
+      },
+      {
+        "id": "sunrise",
+        "title": "New Year sunrise (해맞이) ritual",
+        "content": "The open due-east sea makes Chuam a representative Gangwon 'sun-greeting' (해맞이) spot. Every New Year's dawn, crowds brave the cold to welcome the year's first sunlight, entrusting wishes for the new year to the red light rising above the horizon. This ritual lets a lone sea rock carry collective emotional memory."
+      },
+      {
+        "id": "legend",
+        "title": "The legend of Grandmother Rock: a watch on the sea",
+        "content": "Across the water from Chotdaebawi stands the 'Grandmother Rock' (해안정, also called 할머니바위 / Grandmother Rock), with a touching legend: a wife stood by the sea day after day gazing at her husband who sailed out and never returned, finally turning into a great rock in the sea. The composition of Chotdaebawi and Grandmother Rock facing each other is the most direct footnote to this legend, adding a gentle human warmth to Chuam."
+      },
+      {
+        "id": "bridge",
+        "title": "Chuam Bridge: a new landmark on the sea",
+        "content": "The Chuam Suspension Bridge (출렁다리), about 72 m long, opened in 2024 across the sea, swaying gently with the waves like a ribbon floating above the East Sea. It weaves the candle rock, Grandmother Rock and coastal trail into one walking experience — Donghae's most recognizable recent landmark, completing the 'view the rock from the bridge' angle."
+      },
+      {
+        "id": "modern",
+        "title": "Why it is called 'the East Coast's representative sea rock'",
+        "content": "The most common impression among visitors is Chuam as 'a candle flame above the East Sea'. In fact, its charm is not only good looks, but that a lone sea rock holds together national-anthem memory, sunrise ritual, watch legend and citizens' everyday sea breeze — Chuam is remembered precisely because it writes the East Sea's most typical 'rock and sea' into one coastline."
+      }
+    ],
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "Chuam is not just a rock, but the seaside backdrop of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i' — from the New Year sun-greeting ritual to the national-anthem memory, sea and nation are written into one shared public memory here."
+    }
+  },
+  "sitePlaques": {
+    "title": "Reading the On-Site Signs",
+    "subtitle": "What's worth reading slowly on site is often not the photo badge, but the official signs explaining 'why this rock is here'.",
+    "intro": "The readings below are based on Donghae City's Chuam coast introductions, ecology notes and Chuam Bridge guide, turning information visible on site but not always read closely into understandable English.",
+    "items": [
+      {
+        "id": "monument",
+        "badge": "Rock safety sign",
+        "title": "Sea stack & water safety",
+        "koTitle": "추암 촛대바위 안전 안내",
+        "koTitleZh": "Chuam Chotdaebawi safety guide",
+        "location": "Both sides of the rock-view walkway entrance",
+        "body": "These signs give the key safety info: tide and surf warnings, no-climbing notices, and slippery-reef warnings at high/low tide. Reading the signs is lesson one in using this public coast."
+      },
+      {
+        "id": "signboard",
+        "badge": "Coastal ecology (KO/EN)",
+        "title": "Bay, tides & sea ecology",
+        "koTitle": "추암 해변 · 바다 조망",
+        "koTitleZh": "Chuam coast · sea view",
+        "location": "North rock-view area",
+        "body": "The signs stress Chuam's status as a representative East Sea rock coast, and remind visitors that half the beauty is the rock, half is the real sea in front. The tidal flat at low tide is the best window to observe shellfish and shorebirds."
+      },
+      {
+        "id": "wooden",
+        "badge": "Chuam Bridge guide",
+        "title": "Sea bridge & rock viewpoint",
+        "koTitle": "추암 출렁다리 · 해안 산책로",
+        "koTitleZh": "Chuam Bridge · coastal trail",
+        "location": "Bridge entrance",
+        "body": "The guide explains 'how to use this coast without disturbing it'. The bridge builds the ritual of viewing the rock from above; the trail guides flow on safe paths; the coast handles water contact and rest — together the design logic of Chuam becomes clear."
+      },
+      {
+        "id": "dongporu",
+        "badge": "Anthem backdrop marker",
+        "title": "National anthem filming backdrop",
+        "koTitle": "애국가 촬영 배경지",
+        "koTitleZh": "National anthem filming backdrop",
+        "location": "By the rock-view platform",
+        "body": "Erected by Donghae City, marking Chuam Chotdaebawi as the seaside backdrop of the first line of Korea's national anthem. It reminds every visitor: the sea at your feet is the most direct picture of 'East Sea water' in national memory."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "From the sea candle rock, due-east sunrise, Chuam Bridge to the Grandmother Rock legend — the visual beauty of Chuam Chotdaebawi Rock.",
+    "photoAlt": "Chuam Chotdaebawi Rock (추암 촛대바위)",
+    "photoAlts": [
+      "Panorama of Chuam Chotdaebawi, a sea pillar crowned by a lone pine against the open East Sea.",
+      "Quiet empty coast at dawn, calm sea, best for slow sunrise shots.",
+      "New Year sunrise (해맞이) on the due-east sea, red light across the horizon.",
+      "Chotdaebawi in morning front-light, rock and pine detail clearest.",
+      "Chuam Suspension Bridge (출렁다리) across the sea, like a ribbon on the East Sea.",
+      "Overlooking Chotdaebawi and Grandmother Rock together from the bridge deck.",
+      "Grandmother Rock (해안정) facing Chotdaebawi across the water, a century-old legend.",
+      "Tidal flat at low tide with shellfish and foraging shorebirds.",
+      "Blue-and-white coastal scenery, echoing Donghae's peninsular port palette.",
+      "Classic composition using the coast as a lead-in to rock and skyline.",
+      "North rock-view wooden walkway, one of Chuam's most recognizable photo spots.",
+      "Warm family wading scene; gentle sand suits family water play.",
+      "Warm dusk coast, afterglow drawing golden glints on the sea.",
+      "Sunset with the candle rock; dawn to noon is the best window.",
+      "Shore scene with gulls and fishing boats, echoing Donghae's fishing past.",
+      "High viewpoint capturing 'rock – bridge – coast – city' in one frame.",
+      "Summer-night coast lights; Chuam becomes Donghae's romantic coastline at night.",
+      "Warm-toned coast trail, showing the public coast gently embraced by the city.",
+      "Coast in morning mist, the port city's occasional quiet at dawn.",
+      "Couples and independent travelers posing on the bridge.",
+      "Snowy quiet coast, the port city's occasional winter stillness.",
+      "The anthem-backdrop monument, telling the national memory of 'East Sea water'.",
+      "Close-up of the lone pine and candle rock, sturdy branches against the blue sea.",
+      "Dawn back-lit silhouette, the pillar outlined in gold-red on the sea."
+    ],
+    "viewAll": "View location on Google Maps",
+    "showMore": "Show more photos",
+    "mapsUrl": "https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Visitor feedback is available on Google Maps (external link).",
+    "featuredTitle": "Visitor Quotes",
+    "featuredSubtitle": "A few short lines that capture Chuam's character.",
+    "moreReviews": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9",
+    "featured": [
+      {
+        "text": "Walking east along the coast, the candle rock crowned by a lone pine stands in the sea; the dawn sunrise dyes the whole sea gold — so healing.",
+        "source": "Independent traveler · Seoul"
+      },
+      {
+        "text": "A sea rock facing the ocean, free and easy to stroll — Donghae's gentlest coastal corner.",
+        "source": "Photographer · Gangwon-do"
+      },
+      {
+        "text": "With kids slowly along the gentle sand, Chuam Bridge surprised the little ones and was easy for seniors too.",
+        "source": "Family · Wonju"
+      }
+    ],
+    "items": [
+      {
+        "name": "Minjun",
+        "date": "May 2026",
+        "rating": 5,
+        "text": "Visited at dawn; the sunrise on the rock is super photogenic, and the moment overlooking the whole coast from Chuam Bridge was silent — strongly recommend sunrise, best light."
+      },
+      {
+        "name": "Seoyeon",
+        "date": "Apr 2026",
+        "rating": 5,
+        "text": "The pillar-and-pine composition is stunning; entering from the gentle side is family-friendly, coastal wind is strong so bring a jacket."
+      },
+      {
+        "name": "Jihoon",
+        "date": "Mar 2026",
+        "rating": 4,
+        "text": "Worth it as a free public coast; summer gets crowded, weekdays or early morning are more comfortable."
+      },
+      {
+        "name": "Ha-eun",
+        "date": "Feb 2026",
+        "rating": 5,
+        "text": "About a 5 min walk from the coast to Chuam Bridge; the coast along the way is pleasant, good for a half-day stroll."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "How to Get Here",
+    "subtitle": "28 Chotdaebawi-gil, Donghae-si, Gangwon-do, South Korea (Plus Code: F5H6+P2)",
+    "openMaps": "Open in Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9"
+  },
+  "footer": {
+    "siteName": "Chuam Chotdaebawi Rock (추암 촛대바위)",
+    "rights": "© 2026 Chuam Chotdaebawi Rock Guide — an independent non-profit attraction information project. All rights reserved.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "So that every traveler visiting Donghae can experience this candlestick rock rising from the sea, we have organized scattered official information into this guide — only to give you the purest sunrise, sea breeze and legend."
+    },
+    "legalLinksTitle": "Privacy & Terms",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Official & Reference Resources",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9",
+    "officialLinksList": [
+      { "name": "Donghae Official Tourism (Donghae Tour)", "url": "https://www.dh.go.kr/tour" },
+      { "name": "Gangwon Official Tourism (Gangwon Tour)", "url": "https://www.gangwon.to" },
+      { "name": "Korea Tourism Organization (VISITKOREA)", "url": "https://english.visitkorea.or.kr" },
+      { "name": "Donghae City Hall", "url": "https://www.dh.go.kr" },
+      { "name": "Gangwon Special Self-Governing Province", "url": "https://state.gwd.go.kr" }
+    ],
+    "disclaimer": "This website is an independent non-profit visitor information project. We are affiliated with no government agency or official organization.",
+    "dataSource": "All attraction information referenced on this site is cross-checked against public materials from the Korea Tourism Organization (VISITKOREA), Donghae City Hall and the Gangwon Special Self-Governing Province, with no commercial recommendations.",
+    "dataSourceLabel": "Data Source"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      { "heading": "1. Information Collection", "content": "We generally do not actively collect users' personal identity information. Any information you provide via contact forms or email will be kept strictly confidential." },
+      { "heading": "2. Use of Information", "content": "Information we collect is used only to provide, maintain and improve our services and to communicate with you. We will not sell or share your personal information with third parties for marketing purposes." },
+      { "heading": "3. Cookies & Tracking", "content": "We use cookies and similar tracking technologies to record activity on the site and store certain information. You can instruct your browser to refuse all cookies or to alert you when a cookie is sent." },
+      { "heading": "4. Data Security", "content": "Your data security matters to us. We take commercially reasonable measures to protect your personal data, though no internet transmission is 100% secure." }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      { "heading": "1. Acceptance of Terms", "content": "By accessing and using this website, you agree to be bound by these terms. If you disagree with any part, do not use the service." },
+      { "heading": "2. Use of Service", "content": "This website is an independent non-profit visitor information project. The information provided is for general informational purposes only. You agree to use the site responsibly and lawfully." },
+      { "heading": "3. Intellectual Property", "content": "All content on this site, including text, images and logos, unless otherwise stated, is the property of the site owner. Unauthorized use, reproduction or distribution is strictly prohibited." },
+      { "heading": "4. Limitation of Liability", "content": "We are not liable for any direct, indirect, incidental or consequential damages arising from the use or inability to use this site or the information contained in it." }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Manage your cookie preferences.",
+    "essential": { "title": "Strictly Necessary Cookies", "description": "Required for basic site function.", "badge": "Always active" },
+    "analytics": { "title": "Analytics Cookies", "description": "Help us understand how visitors interact with the site." },
+    "marketing": { "title": "Marketing Cookies", "description": "Used to track visitors across sites." },
+    "save": "Save preferences",
+    "saved": "Preferences saved!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical information about Chuam Chotdaebawi Rock's facilities, history and visit planning.",
+    "amenities": {
+      "title": "Nearby Facilities",
+      "items": [
+        { "icon": "🅿️", "label": "Parking", "value": "Chuam Beach public lot / Chuam Bridge lot" },
+        { "icon": "🚻", "label": "Restrooms", "value": "Coast entrance & park restrooms" },
+        { "icon": "🔌", "label": "Fuel / EV charge", "value": "EV chargers at nearby public lots" },
+        { "icon": "♿", "label": "Accessibility", "value": "Gentle sand & trail accessible" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transport & Infrastructure",
+        "items": [
+          { "q": "Is there parking, and what does it cost?", "a": "Several public lots surround the coast, such as Chuam Beach public parking and Chuam Bridge parking, within walking distance. Public paid rates vary by season (2024 basis: small car about 1,000 KRW / hour, daily cap about 5,000 KRW); they fill fast on peak weekends — arrive early or prefer transit." },
+          { "q": "Are wheelchairs or strollers allowed?", "a": "The north section of Chuam Beach and the rock-view walkway are gently sloped with boardwalks and accessible ramps; wheelchairs and strollers can reach the rock area fairly easily, but sand still resists wheels — use boardwalks and hard surfaces." },
+          { "q": "Are there restrooms or food on site?", "a": "Public restrooms are at the coast entrance and park; dining and convenience stores cluster in Donghae city — stock up on water and food at the entrance or in the city before entering the coast." },
+          { "q": "Is there a gas station or EV charging nearby?", "a": "EV chargers are at the coast-side public lots and Chuam Bridge parking; conventional gas stations line Donghae city center and main roads, handy for drivers to refuel on the way in." }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "History & Facts",
+        "items": [
+          { "q": "What does 'Chotdaebawi' have to do with the sea?", "a": "'Chotdaebawi (촛대바위)' means 'candlestick stone', named for its resemblance to a giant candlestick planted in the sea. It rises about 10 m from the sea, crowned by a red pine, facing the open east sea — the place where the first morning light is welcomed since ancient times; the name hides the reef-cape gene and a character that faces the sea and keeps silent watch." },
+          { "q": "What is its special natural and cultural value?", "a": "Chuam is not a themed park, but a public coast rock that citizens turned into a landmark holding together national-anthem memory, sunrise ritual, watch legend and everyday sea breeze. The sea candle rock, Chuam Bridge and Grandmother Rock form a low-impact, high-empathy design and one of Donghae's 'rock and sea' city cards." }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & Tickets",
+        "items": [
+          { "q": "Is there an admission fee?", "a": "Chuam is an open public coast, free long-term, the public area accessible 24 hours, no gate, no ticket or reservation — visit anytime (respect residents' rest, avoid late-night noise)." },
+          { "q": "How long does a visit take?", "a": "A relaxed visit is about 1–2 hours (including rock viewing and photo stops); if you add Chuam Bridge, Grandmother Rock and Donghae seafood street, reserve a half day." },
+          { "q": "Can I still go in bad weather?", "a": "Yes — it is an open coast, accessible in any weather. But no entering the sea during typhoons, high surf or thunderstorms; reefs are slippery and visibility low, wear non-slip shoes and watch weather; avoid the rock base and coastal steps in bad weather." }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Nearby Links",
+        "items": [
+          { "q": "What else is worth visiting nearby?", "a": "From Chuam you can link Chuam Bridge (출렁다리, swinging sea trail), Grandmother Rock (해안정, watch legend), Donghae seafood street (squid and local food), Samcheok coastal rail trail (해안트레일) and Gangneung Gyeongpo Beach, forming a Donghae 'rock – bridge – food – coastline' half-day route." }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Explore More of Donghae",
+    "attractionsTitle": "Nearby Attractions",
+    "toursTitle": "Recommended Experiences",
+    "attractions": [
+      { "name": "Chuam Bridge (출렁다리 swinging sea trail)", "url": "https://www.dh.go.kr/tour" },
+      { "name": "Grandmother Rock (해안정 watch legend)", "url": "https://english.visitkorea.or.kr" },
+      { "name": "Donghae Beach (동해해수욕장)", "url": "https://www.dh.go.kr/tour" },
+      { "name": "Samcheok Coastal Rail Trail (삼척 해안트레일)", "url": "https://english.visitkorea.or.kr" },
+      { "name": "Gangneung Gyeongpo Beach (강릉 경포해변)", "url": "https://www.gangwon.to" }
+    ],
+    "tours": [
+      { "name": "Donghae City tourism portal (Donghae Tour)", "url": "https://www.dh.go.kr/tour" },
+      { "name": "Korea Tourism Organization (VISITKOREA)", "url": "https://english.visitkorea.or.kr" },
+      { "name": "Gangwon Official Tourism (Gangwon Tour)", "url": "https://www.gangwon.to" }
+    ]
+  },
+  "scienceArt": {
+    "title": "Coastal Nature & Cultural Light: Rock, Tide & Nation",
+    "subtitle": "Dig one layer below the surface 'good looks' to find what is truly rare here: a sea stack, a piece of national memory, and an open-air coastal classroom at once.",
+    "scienceMuseum": {
+      "name": "Tides & sea erosion of Donghae",
+      "role": "A public sea rock built on a cape",
+      "highlight": "The hardest part of Chuam is both visible and invisible. Visible is the candle rock and sea horizon; invisible are the tides, sea erosion and tidal flat that sustain the coastal ecosystem. Visitors see scenery; geologists see a coastal system still running.",
+      "points": [
+        "Core: tides, sea erosion and tidal flat light up this coast.",
+        "Key: public sea rock transformed into low-impact, high-empathy space.",
+        "Meaning: it upgrades 'coastal neglect' into a publicly observable coast model."
+      ],
+      "ctaLabel": "See Ministry of Oceans and Fisheries ↗",
+      "ctaUrl": "https://www.mof.go.kr"
+    },
+    "artMuseum": {
+      "name": "The East Sea in the anthem",
+      "role": "Cultural symbol of the Chuam coast",
+      "highlight": "The sea sunrise, the anthem backdrop and the Grandmother Rock legend, together with the sea candle rock, form Chuam's identity system: instantly readable as belonging to the East Sea, to the nation, and to a gentle, restrained coastal aesthetics. From a lone sea rock to national memory, this contrast makes it one of Donghae's most memorable cultural images.",
+      "points": [
+        "Imagery: candle rock, lone pine and bridge form strong recognition.",
+        "Status: Donghae's most photogenic coastal sea rock.",
+        "Narrative: it translates coastal rock into a publicly felt aesthetic experience."
+      ],
+      "ctaLabel": "See Donghae tourism ↗",
+      "ctaUrl": "https://www.dh.go.kr/tour"
+    }
+  },
+  "outdoorMuseum": {
+    "title": "Photo & Spotting Guide: Chuam's Photo Spots",
+    "subtitle": "As Donghae's most recognizable coastal sea rock, a few structured spots and times greatly improve your photos' usefulness and beauty.",
+    "items": [
+      {
+        "id": "sunrise",
+        "icon": "🌅",
+        "name": "Sunrise coast · sun-greeting ritual",
+        "location": "Due-east open coast section",
+        "background": "At dawn the due-east sea is dyed gold-red by the sunrise — Chuam's classic 'sun-greeting' composition, the candle rock outlined in back-light.",
+        "points": [
+          "Use the coastline as a lead-in to the red sun rising on the horizon.",
+          "Crouch low to layer the pillar and sea for a steadier frame."
+        ],
+        "badge": { "value": "Dawn", "label": "Best shot" }
+      },
+      {
+        "id": "bridge",
+        "icon": "🌉",
+        "name": "Chuam Bridge · sea overlook",
+        "location": "출렁다리 trail",
+        "background": "Shoot the candle rock + Grandmother Rock + East Sea together from below or the top of the bridge — Chuam's most recognizable spot.",
+        "points": [
+          "Side-light at dawn makes the rock structure softest.",
+          "Mind your feet and rails; don't enter closed zones for a frame."
+        ],
+        "badge": { "value": "All day", "label": "Most accessible" }
+      },
+      {
+        "id": "sea",
+        "icon": "🌊",
+        "name": "Dusk & blue hour",
+        "location": "North rock-view area",
+        "background": "Blue hour (20–30 min after sunset) balances sky and sea best — the strongest mood window.",
+        "points": [
+          "Shoot at blue hour for the most balanced sky and sea.",
+          "Silhouette the candle rock leaving a large warm sea."
+        ],
+        "badge": { "value": "Dusk", "label": "Strongest mood" }
+      },
+      {
+        "id": "night",
+        "icon": "🌃",
+        "name": "Coast lights night view",
+        "location": "South coast / bridge",
+        "background": "At night the coast lights up and the sea mirrors the river of lights — good for a closing long-exposure night shot.",
+        "points": [
+          "Use the coastline as a lead-in to the city lights.",
+          "Small aperture + tripod for longer exposure."
+        ],
+        "badge": { "value": "Night", "label": "Best layers" }
+      }
+    ]
+  },
+  "education": {
+    "title": "Why is this the East Coast's representative sea rock?",
+    "subtitle": "What's most worth learning about Chuam is not 'it got pretty', but how a public sea stack was brought back into the city's public life while keeping its past.",
+    "points": [
+      {
+        "title": "A coast still used by citizens",
+        "text": "Chuam is not a 'hide the coast and done' case, but a sample that continuously activates the coast through public-space design and turns it into a shared place.",
+        "items": [
+          "Citizens entrust daily strolls and the sun-greeting ritual to this coast.",
+          "Public coast and city life coexist long-term."
+        ]
+      },
+      {
+        "title": "Writing coastal ethics into visitor behavior",
+        "text": "The boardwalk, safety system and signs are not just guides, but let every visitor, while using the space, take part in respect for the ocean and others.",
+        "items": [
+          "Visitors are guided to stay on low-impact paths.",
+          "Water contact and ecology are not sacrificed to each other."
+        ]
+      },
+      {
+        "title": "Turning coastal memory into public aesthetics",
+        "text": "Chuam did not erase the fishing-port past, but through the rock, anthem backdrop and signs lets the public, while viewing, realize what this land has gone through.",
+        "items": [
+          "Story depth and water contact complete at the same place.",
+          "This is exactly the value a non-profit science site should amplify."
+        ]
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who Should Come? From Segment Guide to Custom Itinerary",
+    "subtitle": "Not just 'you'll like it', but directly telling you how to go, where to start, and which Donghae nodes to link.",
+    "items": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families",
+        "resonance": "Free, open, safe soft sand; kids can wade and watch the sea, and easily walk Chuam Bridge from the gentle side.",
+        "tip": "Save energy for the top viewpoint rather than spending it on steep slopes."
+      },
+      {
+        "icon": "📷",
+        "group": "Photographers & couples",
+        "resonance": "Dawn sunrise and the sea candle rock are Donghae's most romantic frames, very photogenic.",
+        "tip": "Count arrival, return and light into your plan so the frame doesn't lose to on-site pace."
+      },
+      {
+        "icon": "🌿",
+        "group": "Nature & local lovers",
+        "resonance": "As a coastal ecology sample, tides and tidal flats are worth a close look.",
+        "tip": "Avoid the most crowded weekends; choose dawn or weekday afternoons to truly observe coastal details."
+      },
+      {
+        "icon": "🗺️",
+        "group": "First-time visitors to Korea",
+        "resonance": "Without going far to the countryside, you can observe the sea stack, anthem memory and public coast in Donghae city, and link trains, buses and local food — an ideal starting point to understand Donghae's urban transformation.",
+        "tip": "If you can only pick one Donghae coast landmark, Chuam is the best first stop for the 'rock and sea' theme."
+      }
+    ]
+  },
+  "lodging": {
+    "title": "Lodging Guide: Stay close, or stay convenient",
+    "subtitle": "Donghae is a port city where 'sea and city connect'. We don't recommend specific hotels, but help you analyze two lodging patterns to choose what suits you.",
+    "scenarioTitle": "Two choices, how to choose",
+    "options": [
+      {
+        "icon": "🪨",
+        "name": "Chuam / Chuam Beach area",
+        "role": "Best for coast & bridge",
+        "highlight": "Staying at Chuam or Chuam Beach, you walk to the sea candle rock, Chuam Bridge and coastal night views; the night sea breeze and lights suit travelers. Best for those focused on 'rock stroll + coast' with high convenience needs.",
+        "commute": "Commute: about 5–15 min walk to the coast, about 5–10 min to Chuam Bridge. Low demand on legs, good for late-night coast walks.",
+        "points": [
+          "About 5–15 min walk to Chuam, least effort.",
+          "Very rich coastal night views and dining.",
+          "More choices, usually better value."
+        ]
+      },
+      {
+        "icon": "🏙️",
+        "name": "Donghae city / seafood street",
+        "role": "Best for food & transit",
+        "highlight": "Staying in Donghae city or the seafood street, next to the train station, express bus terminal and food streets, best for those focused on 'eat & stroll + transfer', then take bus / taxi to Chuam by day.",
+        "commute": "Commute: about 15 min by city bus or taxi to Chuam. Good for drivers or independent travelers wanting absolute convenience.",
+        "points": [
+          "Train and bus stations at hand, good for transfers.",
+          "Squid and local food and night markets are very rich.",
+          "About 15–30 min walk or a short ride to Chuam."
+        ]
+      }
+    ],
+    "peakTitle": "Peak-season warning",
+    "peak": "In Donghae's summer (especially the sunrise peak) and holidays, rooms tighten and prices rise noticeably. Book several weeks ahead; if booking near a holiday, widen the range to Gangneung, Samcheok and other surrounding areas, then take the train.",
+    "tipsTitle": "Lodging tips",
+    "tips": [
+      "Want sunrise: prefer Chuam / Chuam Beach, walk to the coast at dawn.",
+      "Value food & convenience: choose Donghae city / seafood street, walking and dining at hand.",
+      "Before booking, confirm breakfast, parking and EV chargers (drivers especially).",
+      "Book ahead in peak season and holidays to avoid no rooms or high prices."
+    ]
+  }
+}
