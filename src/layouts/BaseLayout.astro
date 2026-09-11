@@ -18,17 +18,20 @@ const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
 const canonical = alts[lang] ?? alts.zh;
 const { messages } = getI18n(Astro.url);
+const ogImage = `${siteConfig.baseUrl}/gallery/chotdaebawi-1.jpg`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: messages.meta.title,
+  '@id': `${siteConfig.baseUrl}/#chotdaebawi`,
+  name: 'Chuam Chotdaebawi Rock',
+  alternateName: ['추암 촛대바위', '東海燭台岩', '楚岩燭台岩', 'Chuam Candlestick Rock'],
   description: messages.meta.description,
   url: canonical,
-  image: 'https://chotdaebawi.com/gallery/chotdaebawi-1.jpg',
+  image: ['https://chotdaebawi.com/gallery/chotdaebawi-1.jpg'],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '28 Chotdaebawi-gil, Donghae-si',
+    streetAddress: '28 Chotdaebawi-gil',
     addressLocality: 'Donghae-si',
     addressRegion: 'Gangwon-do',
     addressCountry: 'KR',
@@ -47,6 +50,8 @@ const jsonLd = {
     },
   ],
   isAccessibleForFree: true,
+  publicAccess: true,
+  touristType: ['Sunrise viewers', 'Photographers', 'Families'],
   offers: [
     {
       '@type': 'Offer',
@@ -59,9 +64,10 @@ const jsonLd = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.4',
-    reviewCount: '10370',
+    reviewCount: '10408',
   },
   sameAs: ['https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9'],
+  hasMap: 'https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9',
 };
   const breadcrumbLd = (() => {
     const bc = messages.breadcrumb;
@@ -96,18 +102,24 @@ const jsonLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="zh" href={alts.zh} />
+    <link rel="alternate" hreflang="zh-Hant" href={alts.zh} />
     <link rel="alternate" hreflang="en" href={alts.en} />
     <link rel="alternate" hreflang="ja" href={alts.ja} />
     <link rel="alternate" hreflang="ko" href={alts.ko} />
     <link rel="alternate" hreflang="x-default" href={alts.xDefault} />
 
+    <meta property="og:site_name" content={siteConfig.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={title} />
     <meta property="og:locale" content={ogLocale[lang] ?? lang} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>

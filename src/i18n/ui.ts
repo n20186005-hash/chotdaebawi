@@ -7,7 +7,7 @@ export const defaultLang = 'ko';
 export const languagesList = ['zh', 'en', 'ja', 'ko'] as const;
 
 export const languages: Record<string, string> = {
-  zh: '中文',
+  zh: '繁體中文',
   en: 'English',
   ja: '日本語',
   ko: '한국어',
@@ -47,6 +47,6 @@ export function buildAlternates(path = ''): Record<string, string> {
 }
 
 export function htmlLangAttr(lang: string): string {
-  if (lang === 'zh') return 'zh-CN';
+  if (lang === 'zh') return 'zh-Hant';
   return lang;
 }
