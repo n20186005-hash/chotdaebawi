@@ -76,7 +76,8 @@
       "note": "The rock faces due east; soft front-light is best from early morning to noon. On peak summer weekends, allow extra time to avoid the crowds.",
       "seaGlare": "Sea Glare correction: Chuam faces the east sea, so at dawn the pillar is back-lit in silhouette while the sea glows gold-red; from morning to noon it turns front-lit and the rock and pine detail are clearest — the golden window to frame 'candle – pine – sea' together.",
       "arriveLabel": "Suggested arrival",
-      "blueHourLabel": "Blue hour"
+      "blueHourLabel": "Blue hour",
+      "lightTimeline": "Backlight at dawn · Golden glare after 15:00 · Ends in blue hour"
     }
   },
   "quickFactsDashboard": {
@@ -97,6 +98,7 @@
     "subtitle": "We don't just show the numbers — we tell you what to actually do about them.",
     "attributionLabel": "Weather data · Open-Meteo",
     "loading": "Loading…",
+    "condUnknown": "Unknown",
     "error": "Weather is unavailable right now.",
     "updatedAt": "Updated",
     "metrics": {

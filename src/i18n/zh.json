@@ -101,7 +101,8 @@
       "note": "燭台岩面向東側海面，清晨至上午順光最佳；若逢旅遊旺季週末，請再額外預留錯峰時間。",
       "seaGlare": "海面反光修正（Sea Glare）：楚岩面向東側海面，清晨日出時岩柱處於逆光剪影、海面泛起金紅；上午至正午轉為順光，岩體與孤松細節最清晰，是捕捉「燭台—孤松—海」同框的黃金窗口。",
       "arriveLabel": "建議抵達",
-      "blueHourLabel": "藍調時刻"
+      "blueHourLabel": "藍調時刻",
+      "lightTimeline": "清晨背光 · 15:00 後順光金波 · 藍調收束"
     }
   },
   "quickFactsDashboard": {
@@ -152,6 +153,7 @@
     "subtitle": "不只給你溫度和天氣，還直接告訴你「該怎麼做」。",
     "attributionLabel": "天氣數據 · Open-Meteo",
     "loading": "正在獲取天氣…",
+    "condUnknown": "未知天氣",
     "error": "暫時無法獲取天氣資訊。",
     "updatedAt": "更新於",
     "metrics": {
