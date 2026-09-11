@@ -1,0 +1,674 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const w = messages.weather ?? {};
+const marine = w.marine ?? {};
+const tide = w.tide ?? {};
+---
+
+<section id="weather" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-8">
+      <p class="text-xs uppercase tracking-[0.22em] mb-2" style="color: var(--text-muted);">{w.eyebrow}</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{w.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{w.subtitle}</p>
+    </div>
+
+    <!-- 风险提醒：有才显示，无则隐藏（置顶） -->
+    <div data-w-risk class="weather-risk weather-hidden mb-6">
+      <p class="weather-risk-title">⚠️ <span data-w-risk-title></span></p>
+      <p data-w-risk-hint class="text-sm mb-3" style="color: var(--text-secondary);"></p>
+      <ul data-w-risk-list class="weather-list is-risk"></ul>
+    </div>
+
+    <!-- 基础天气卡片 -->
+    <div class="rounded-3xl border p-5 sm:p-7 mb-6" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-5">
+        <div class="flex items-center gap-4">
+          <span data-w-icon class="text-5xl leading-none" aria-hidden="true">🌤️</span>
+          <div>
+            <p data-w-temp class="text-4xl font-semibold leading-none" style="color: var(--text-primary);">—</p>
+            <p data-w-desc class="text-sm mt-1" style="color: var(--text-secondary);"></p>
+          </div>
+        </div>
+        <p data-w-updated class="text-xs" style="color: var(--text-muted);"></p>
+      </div>
+      <div data-w-chips class="weather-chips"></div>
+    </div>
+
+    <!-- 出行建议核心区 -->
+    <div class="rounded-3xl border p-5 sm:p-7 mb-6" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+      <div class="mb-4">
+        <h3 class="font-display text-xl sm:text-2xl font-semibold mb-1" style="color: var(--text-primary);">{w.adviceTitle}</h3>
+        <p class="text-sm" style="color: var(--text-secondary);">{w.adviceHint}</p>
+      </div>
+      <div data-w-tabs class="weather-tabs" role="tablist"></div>
+      <div data-w-panels></div>
+    </div>
+
+    <!-- 海边 / 海况信息（仅海边景点显示，无数据自动隐藏） -->
+    <div data-w-marine class="weather-hidden rounded-3xl border p-5 sm:p-6 mb-6" style="background: var(--bg-tertiary); border-color: var(--border-color);">
+      <h3 class="font-display text-lg font-semibold mb-3" style="color: var(--text-primary);">🌊 {marine.title}</h3>
+      <div data-w-marine-grid class="weather-marine-grid"></div>
+      <p data-w-marine-note class="text-sm mt-3 leading-relaxed" style="color: var(--text-secondary);"></p>
+    </div>
+
+    <!-- 潮汐（海边景点专用，无数据自动隐藏） -->
+    <div data-w-tide id="tide" class="weather-hidden rounded-3xl border p-5 sm:p-6 mb-6" style="background: var(--bg-tertiary); border-color: var(--border-color); scroll-margin-top: 5rem;">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <h3 class="font-display text-lg font-semibold" style="color: var(--text-primary);">🌕 {tide.title}</h3>
+        <span data-w-tide-state class="weather-hidden weather-badge"></span>
+      </div>
+      <div data-w-tide-chips class="weather-marine-grid mb-4"></div>
+      <p data-w-tide-advice class="weather-tide-advice"></p>
+      <p data-w-tide-curve-title class="weather-curve-title">{tide.curveTitle}</p>
+      <div data-w-tide-curve class="weather-curve-wrap"></div>
+      <p data-w-tide-events-title class="weather-tide-subtitle">{tide.eventsTitle}</p>
+      <ul data-w-tide-events class="weather-tide-events"></ul>
+      <p class="text-xs mt-3 leading-relaxed" style="color: var(--text-muted);">{tide.note}</p>
+    </div>
+
+    <!-- 7 日预报 -->
+    <div>
+      <h3 class="font-display text-xl sm:text-2xl font-semibold mb-4" style="color: var(--text-primary);">{w.forecastTitle}</h3>
+      <div data-w-forecast class="weather-forecast"></div>
+    </div>
+
+    <p class="text-xs mt-5 text-center" style="color: var(--text-muted);">
+      <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">{w.attributionLabel}</a>
+    </p>
+  </div>
+</section>
+
+<script type="application/json" id="weather-i18n" is:inline set:html={JSON.stringify(w)}></script>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById('weather');
+    var dataEl = document.getElementById('weather-i18n');
+    if (!root || !dataEl) return;
+
+    var W = {};
+    try { W = JSON.parse(dataEl.textContent || '{}') || {}; } catch (e) { W = {}; }
+
+    var LANG = (document.documentElement.getAttribute('lang') || 'ko').toLowerCase();
+    var LAT = 37.4793444;
+    var LON = 129.160125;
+
+    var FORECAST_URL =
+      'https://api.open-meteo.com/v1/forecast?latitude=' + LAT + '&longitude=' + LON +
+      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m' +
+      '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,uv_index_max,wind_speed_10m_max' +
+      '&wind_speed_unit=ms&timezone=Asia/Seoul&forecast_days=7';
+    var MARINE_URL =
+      'https://marine-api.open-meteo.com/v1/marine?latitude=' + LAT + '&longitude=' + LON +
+      '&current=wave_height,wave_period,sea_surface_temperature,sea_level_height_msl' +
+      '&hourly=sea_level_height_msl&timezone=Asia/Seoul&forecast_days=2';
+
+    var ICON = {
+      0: '☀️', 1: '🌤️', 2: '⛅', 3: '☁️', 45: '🌫️', 48: '🌫️',
+      51: '🌦️', 53: '🌦️', 55: '🌦️', 56: '🌧️', 57: '🌧️',
+      61: '🌦️', 63: '🌧️', 65: '🌧️', 66: '🌧️', 67: '🌧️',
+      71: '🌨️', 73: '🌨️', 75: '❄️', 77: '🌨️',
+      80: '🌦️', 81: '🌧️', 82: '⛈️', 85: '🌨️', 86: '❄️',
+      95: '⛈️', 96: '⛈️', 99: '⛈️'
+    };
+
+    var LIGHT_RAIN = [51, 53, 55, 56, 57, 61, 80];
+    var HEAVY_RAIN = [63, 65, 66, 67, 81, 82, 95, 96, 99];
+    var THUNDER = [95, 96, 99];
+    var SNOW = [71, 73, 75, 77, 85, 86];
+    var FOG = [45, 48];
+    var CLEAR = [0, 1];
+    var CLOUDY = [2, 3];
+
+    function $(sel, ctx) { return (ctx || root).querySelector(sel); }
+    function setText(el, txt) { if (el) el.textContent = txt == null ? '' : String(txt); }
+    function isNum(v) { return typeof v === 'number' && isFinite(v); }
+    function round(v) { return Math.round(v); }
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, function (ch) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+      });
+    }
+    function iconOf(code) { return ICON[code] || '🌤️'; }
+    function condText(code) { return (W.cond || {})[String(code)] || ''; }
+
+    function beaufort(ms) {
+      if (!isNum(ms)) return null;
+      var thresholds = [0.3, 1.6, 3.4, 5.5, 8.0, 10.8, 13.9, 17.2, 20.8, 24.5, 28.5, 32.7];
+      var level = 0;
+      for (var i = 0; i < thresholds.length; i++) if (ms >= thresholds[i]) level = i + 1;
+      return level;
+    }
+
+    function uvLevel(uv) {
+      var levels = W.uvLevels || [];
+      if (!isNum(uv)) return '';
+      if (uv < 3) return levels[0] || '';
+      if (uv < 6) return levels[1] || '';
+      if (uv < 8) return levels[2] || '';
+      if (uv < 11) return levels[3] || '';
+      return levels[4] || '';
+    }
+
+    var elIcon = $('[data-w-icon]');
+    var elTemp = $('[data-w-temp]');
+    var elDesc = $('[data-w-desc]');
+    var elUpdated = $('[data-w-updated]');
+    var elChips = $('[data-w-chips]');
+    var elRisk = $('[data-w-risk]');
+    var elRiskTitle = $('[data-w-risk-title]');
+    var elRiskHint = $('[data-w-risk-hint]');
+    var elRiskList = $('[data-w-risk-list]');
+    var elTabs = $('[data-w-tabs]');
+    var elPanels = $('[data-w-panels]');
+    var elMarine = $('[data-w-marine]');
+    var elMarineGrid = $('[data-w-marine-grid]');
+    var elMarineNote = $('[data-w-marine-note]');
+    var elForecast = $('[data-w-forecast]');
+    var elTide = $('[data-w-tide]');
+    var elTideState = $('[data-w-tide-state]');
+    var elTideChips = $('[data-w-tide-chips]');
+    var elTideAdvice = $('[data-w-tide-advice]');
+    var elTideCurve = $('[data-w-tide-curve]');
+    var elTideCurveTitle = $('[data-w-tide-curve-title]');
+    var elTideEventsTitle = $('[data-w-tide-events-title]');
+    var elTideEvents = $('[data-w-tide-events]');
+
+    function buildCtx(cur, daily, marine) {
+      cur = cur || {};
+      var code = isNum(cur.weather_code) ? cur.weather_code : null;
+      var tMax = daily && daily.temperature_2m_max ? daily.temperature_2m_max[0] : undefined;
+      var tMin = daily && daily.temperature_2m_min ? daily.temperature_2m_min[0] : undefined;
+      var pop = daily && daily.precipitation_probability_max ? daily.precipitation_probability_max[0] : undefined;
+      var uv = daily && daily.uv_index_max ? daily.uv_index_max[0] : undefined;
+      var mCur = (marine && marine.current) || {};
+
+      var ctx = {
+        code: code,
+        temp: isNum(cur.temperature_2m) ? cur.temperature_2m : null,
+        feels: isNum(cur.apparent_temperature) ? cur.apparent_temperature : null,
+        humidity: isNum(cur.relative_humidity_2m) ? cur.relative_humidity_2m : null,
+        windMs: isNum(cur.wind_speed_10m) ? cur.wind_speed_10m : null,
+        windLevel: beaufort(cur.wind_speed_10m),
+        tempMax: isNum(tMax) ? tMax : null,
+        tempMin: isNum(tMin) ? tMin : null,
+        precipProb: isNum(pop) ? pop : 0,
+        uv: isNum(uv) ? uv : 0,
+        waveHeight: isNum(mCur.wave_height) ? mCur.wave_height : null,
+        wavePeriod: isNum(mCur.wave_period) ? mCur.wave_period : null,
+        seaTemp: isNum(mCur.sea_surface_temperature) ? mCur.sea_surface_temperature : null
+      };
+      ctx.diurnal = (isNum(ctx.tempMax) && isNum(ctx.tempMin)) ? ctx.tempMax - ctx.tempMin : 0;
+      ctx.clear = code !== null && CLEAR.indexOf(code) !== -1;
+      ctx.cloudy = code !== null && CLOUDY.indexOf(code) !== -1;
+      ctx.fog = code !== null && FOG.indexOf(code) !== -1;
+      ctx.thunder = code !== null && THUNDER.indexOf(code) !== -1;
+      ctx.heavyRain = code !== null && HEAVY_RAIN.indexOf(code) !== -1;
+      ctx.lightRain = code !== null && LIGHT_RAIN.indexOf(code) !== -1 && !ctx.heavyRain;
+      ctx.snow = code !== null && SNOW.indexOf(code) !== -1;
+      return ctx;
+    }
+
+    // 条件规则：按优先级从上到下；命中后按类别追加建议文案
+    var RULES = [
+      { key: 'thunder', when: function (c) { return c.thunder; } },
+      { key: 'wind7', when: function (c) { return c.windLevel !== null && c.windLevel >= 7; } },
+      { key: 'heavyRain', when: function (c) { return c.heavyRain; } },
+      { key: 'snow', when: function (c) { return c.snow; } },
+      { key: 'fog', when: function (c) { return c.fog; } },
+      { key: 'beachWave', when: function (c) { return c.waveHeight !== null && c.waveHeight >= 1.5; } },
+      { key: 'rain60', when: function (c) { return c.precipProb >= 60; } },
+      { key: 'lightRain', when: function (c) { return c.lightRain; } },
+      { key: 'heat', when: function (c) { return (c.tempMax !== null && c.tempMax >= 32) || (c.temp !== null && c.temp >= 32); } },
+      { key: 'uv', when: function (c) { return c.uv >= 5; } },
+      { key: 'cold', when: function (c) { return c.tempMax !== null && c.tempMax <= 10; } },
+      { key: 'diurnal', when: function (c) { return c.diurnal > 8; } },
+      { key: 'wind56', when: function (c) { return c.windLevel !== null && c.windLevel >= 5 && c.windLevel <= 6; } },
+      { key: 'sunny', when: function (c) { return c.clear; } },
+      { key: 'cloudy', when: function (c) { return c.cloudy; } },
+      { key: 'beachCalm', when: function (c) { return c.waveHeight !== null && c.waveHeight < 1.5 && (c.seaTemp === null || c.seaTemp >= 18); } },
+      { key: 'beachCold', when: function (c) { return c.seaTemp !== null && c.seaTemp < 15; } }
+    ];
+    var CATS = ['outfit', 'plan', 'items'];
+    var ALL_CATS = ['outfit', 'plan', 'items', 'risk'];
+
+    function buildGroups(ctx) {
+      var groups = { outfit: [], plan: [], items: [], risk: [] };
+      var A = W.advice || {};
+      for (var i = 0; i < RULES.length; i++) {
+        var rule = RULES[i];
+        var hit = false;
+        try { hit = rule.when(ctx); } catch (e) { hit = false; }
+        if (!hit) continue;
+        var entry = A[rule.key];
+        if (!entry) continue;
+        for (var j = 0; j < ALL_CATS.length; j++) {
+          var cat = ALL_CATS[j];
+          var txt = entry[cat];
+          if (txt && groups[cat].indexOf(txt) === -1) groups[cat].push(txt);
+        }
+      }
+      // 多选展示但不过载：每类最多 3 条
+      for (var k = 0; k < ALL_CATS.length; k++) groups[ALL_CATS[k]] = groups[ALL_CATS[k]].slice(0, 3);
+      return groups;
+    }
+
+    function nowHM() {
+      try {
+        return new Date().toLocaleTimeString(LANG, { hour: '2-digit', minute: '2-digit', hour12: false });
+      } catch (e) { return ''; }
+    }
+
+    function renderCurrent(ctx) {
+      setText(elIcon, iconOf(ctx.code));
+      setText(elTemp, ctx.temp !== null ? round(ctx.temp) + '°C' : '—');
+      setText(elDesc, condText(ctx.code));
+      setText(elUpdated, (W.updatedAt ? W.updatedAt + ' ' : '') + nowHM());
+    }
+
+    function renderChips(ctx) {
+      if (!elChips) return;
+      var m = W.metrics || {};
+      var chips = [];
+      if (ctx.feels !== null) chips.push([m.feelsLike, round(ctx.feels) + '°']);
+      chips.push([m.precip, round(ctx.precipProb || 0) + '%']);
+      if (ctx.windLevel !== null) {
+        chips.push([m.wind, ctx.windLevel + (W.windLevelSuffix || '') + ' · ' + ctx.windMs.toFixed(1) + ' ' + (W.windUnit || 'm/s')]);
+      }
+      if (ctx.humidity !== null) chips.push([m.humidity, round(ctx.humidity) + '%']);
+      var uv = round(ctx.uv || 0) + (uvLevel(ctx.uv) ? ' · ' + uvLevel(ctx.uv) : '');
+      chips.push([m.uv, uv]);
+      elChips.innerHTML = chips.map(function (c) {
+        return '<div class="weather-chip"><span class="weather-chip-label">' + esc(c[0]) +
+          '</span><span class="weather-chip-value">' + esc(c[1]) + '</span></div>';
+      }).join('');
+    }
+
+    function renderRisk(groups) {
+      if (!elRisk || !elRiskList) return;
+      if (!groups.risk.length) { elRisk.classList.add('weather-hidden'); return; }
+      elRisk.classList.remove('weather-hidden');
+      setText(elRiskTitle, W.riskTitle || '');
+      setText(elRiskHint, W.riskHint || '');
+      elRiskList.innerHTML = groups.risk.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('');
+    }
+
+    function renderAdvice(groups) {
+      if (!elTabs || !elPanels) return;
+      var tabs = W.tabs || {};
+      var labels = { outfit: tabs.outfit, plan: tabs.plan, items: tabs.items };
+      var active = CATS[0];
+      for (var i = 0; i < CATS.length; i++) { if (groups[CATS[i]].length) { active = CATS[i]; break; } }
+
+      elTabs.innerHTML = CATS.map(function (cat) {
+        var count = groups[cat].length;
+        return '<button type="button" role="tab" class="weather-tab' + (cat === active ? ' is-active' : '') +
+          '" data-w-tab="' + cat + '">' + esc(labels[cat] || cat) + (count ? ' · ' + count : '') + '</button>';
+      }).join('');
+
+      elPanels.innerHTML = CATS.map(function (cat) {
+        var body = groups[cat].length
+          ? '<ul class="weather-list">' + groups[cat].map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'
+          : '<p class="weather-empty">' + esc(W.emptyAdvice || '') + '</p>';
+        return '<div class="weather-panel' + (cat === active ? ' is-active' : '') + '" data-w-panel="' + cat + '">' + body + '</div>';
+      }).join('');
+
+      var buttons = elTabs.querySelectorAll('[data-w-tab]');
+      function activate(cat) {
+        for (var b = 0; b < buttons.length; b++) buttons[b].classList.toggle('is-active', buttons[b].getAttribute('data-w-tab') === cat);
+        var panels = elPanels.querySelectorAll('[data-w-panel]');
+        for (var p = 0; p < panels.length; p++) panels[p].classList.toggle('is-active', panels[p].getAttribute('data-w-panel') === cat);
+      }
+      for (var b = 0; b < buttons.length; b++) {
+        buttons[b].addEventListener('click', function () { activate(this.getAttribute('data-w-tab')); });
+      }
+    }
+
+    function renderMarine(ctx) {
+      if (!elMarine) return;
+      if (ctx.waveHeight === null && ctx.seaTemp === null) { elMarine.classList.add('weather-hidden'); return; }
+      elMarine.classList.remove('weather-hidden');
+      var ml = W.marine || {};
+      var items = [];
+      if (ctx.waveHeight !== null) items.push([ml.wave, ctx.waveHeight.toFixed(1) + ' m']);
+      if (ctx.wavePeriod !== null) items.push([ml.period, round(ctx.wavePeriod) + ' s']);
+      if (ctx.seaTemp !== null) items.push([ml.seaTemp, ctx.seaTemp.toFixed(1) + '°C']);
+      if (elMarineGrid) {
+        elMarineGrid.innerHTML = items.map(function (c) {
+          return '<div class="weather-chip"><span class="weather-chip-label">' + esc(c[0]) +
+            '</span><span class="weather-chip-value">' + esc(c[1]) + '</span></div>';
+        }).join('');
+      }
+      setText(elMarineNote, ml.note || '');
+    }
+
+    function dayLabel(dateStr, index) {
+      if (index === 0) return W.today || '';
+      if (index === 1) return W.tomorrow || '';
+      var parts = String(dateStr).split('-');
+      if (parts.length !== 3) return '';
+      var d = new Date(Date.UTC(+parts[0], +parts[1] - 1, +parts[2]));
+      return (W.weekdays || [])[d.getUTCDay()] || '';
+    }
+
+    function dateLabel(dateStr) {
+      var parts = String(dateStr).split('-');
+      if (parts.length !== 3) return '';
+      return (+parts[1]) + '/' + (+parts[2]);
+    }
+
+    function renderForecast(daily) {
+      if (!elForecast || !daily || !daily.time) return;
+      elForecast.innerHTML = daily.time.slice(0, 7).map(function (date, i) {
+        var code = daily.weather_code ? daily.weather_code[i] : null;
+        var tMax = daily.temperature_2m_max ? daily.temperature_2m_max[i] : null;
+        var tMin = daily.temperature_2m_min ? daily.temperature_2m_min[i] : null;
+        var pop = daily.precipitation_probability_max ? daily.precipitation_probability_max[i] : null;
+        var temp = (isNum(tMax) || isNum(tMin))
+          ? '<span>' + (isNum(tMax) ? round(tMax) : '—') + '°</span> <span class="min">' + (isNum(tMin) ? round(tMin) : '—') + '°</span>'
+          : '';
+        return '<div class="weather-day' + (i === 0 ? ' is-today' : '') + '">' +
+          '<div class="weather-day-name">' + esc(dayLabel(date, i)) + '</div>' +
+          '<div class="weather-day-date">' + esc(dateLabel(date)) + '</div>' +
+          '<div class="weather-day-icon" aria-hidden="true">' + iconOf(code) + '</div>' +
+          '<div class="weather-day-temp">' + temp + '</div>' +
+          (isNum(pop) ? '<div class="weather-day-pop">' + esc(W.forecastPopLabel || '') + ' ' + round(pop) + '%</div>' : '') +
+          '</div>';
+      }).join('');
+    }
+
+    var SEOUL_OFFSET_MS = 9 * 3600000;
+
+    function rep(tpl, map) {
+      return String(tpl == null ? '' : tpl).replace(/\{(\w+)\}/g, function (m, k) {
+        return map[k] == null ? '' : String(map[k]);
+      });
+    }
+
+    function durText(mins) {
+      var T = W.tide || {};
+      var h = Math.floor(mins / 60);
+      var m = mins % 60;
+      if (h <= 0) return rep(T.timeFmtMin, { m: m });
+      return rep(T.timeFmt, { h: h, m: m });
+    }
+
+    function withHint(ev) {
+      return ev.hhmm + (ev.dayHint ? ' · ' + ev.dayHint : '');
+    }
+
+    function hmOf(hourF) {
+      var total = Math.round(hourF * 60);
+      total = ((total % 1440) + 1440) % 1440;
+      var hh = Math.floor(total / 60);
+      var mm = total % 60;
+      return (hh < 10 ? '0' : '') + hh + ':' + (mm < 10 ? '0' : '') + mm;
+    }
+
+    // 接口时间为当地(Asia/Seoul)无时区字符串，统一换算成绝对时间戳
+    function parseHourPoint(timeStr) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(String(timeStr));
+      if (!m) return null;
+      return {
+        day: m[1] + '-' + m[2] + '-' + m[3],
+        hour: (+m[4]) + (+m[5]) / 60,
+        epoch: Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]) - SEOUL_OFFSET_MS
+      };
+    }
+
+    // 用逐小时潮位找满潮/干潮，并用抛物线插值细化到分钟
+    function buildTide(marine) {
+      var h = marine && marine.hourly;
+      if (!h || !h.time || !h.sea_level_height_msl) return null;
+      var times = h.time;
+      var vals = h.sea_level_height_msl;
+      var pts = [];
+      for (var i = 0; i < times.length; i++) {
+        if (!isNum(vals[i])) continue;
+        var p = parseHourPoint(times[i]);
+        if (!p) continue;
+        p.v = vals[i];
+        pts.push(p);
+      }
+      if (pts.length < 5) return null;
+
+      var nowMs = Date.now();
+      var seoulNow = new Date(nowMs + SEOUL_OFFSET_MS);
+      var todayStr = seoulNow.toISOString().slice(0, 10);
+      var tomorrowStr = new Date(nowMs + SEOUL_OFFSET_MS + 86400000).toISOString().slice(0, 10);
+      var nowHour = seoulNow.getUTCHours() + seoulNow.getUTCMinutes() / 60;
+
+      var events = [];
+      for (var j = 1; j < times.length - 1; j++) {
+        var a = vals[j - 1], b = vals[j], c = vals[j + 1];
+        if (!isNum(a) || !isNum(b) || !isNum(c)) continue;
+        var d1 = b - a, d2 = c - b;
+        // 用差值符号判定，等值平台也算：先升后不升=满潮，先降后不降=干潮
+        var isMax = d1 > 0 && d2 <= 0;
+        var isMin = d1 < 0 && d2 >= 0;
+        if (!isMax && !isMin) continue;
+        var base = parseHourPoint(times[j]);
+        if (!base) continue;
+        // 平台时峰/谷取平台中点，其余用抛物线插值细化到分钟
+        var denom = a - 2 * b + c;
+        var shift = d2 === 0 ? 0.5 : (denom !== 0 ? (0.5 * (a - c)) / denom : 0);
+        if (shift > 0.5) shift = 0.5;
+        if (shift < -0.5) shift = -0.5;
+        var epoch = base.epoch + shift * 3600000;
+        var dayStr = new Date(epoch + SEOUL_OFFSET_MS).toISOString().slice(0, 10);
+        var hint = '';
+        if (dayStr === tomorrowStr) hint = W.tomorrow || '';
+        else if (dayStr !== todayStr) {
+          var dp = dayStr.split('-');
+          hint = (W.weekdays || [])[new Date(Date.UTC(+dp[0], +dp[1] - 1, +dp[2])).getUTCDay()] || '';
+        }
+        events.push({
+          type: isMax ? 'high' : 'low',
+          hour: base.hour + shift,
+          hhmm: hmOf(base.hour + shift),
+          day: dayStr,
+          dayHint: hint,
+          epoch: epoch,
+          value: b - 0.25 * (a - c) * shift
+        });
+      }
+      if (!events.length) return null;
+
+      var nextEvent = null, nextHigh = null, nextLow = null;
+      for (var k = 0; k < events.length; k++) {
+        var ev = events[k];
+        if (ev.epoch < nowMs - 60000) continue;
+        if (!nextEvent) nextEvent = ev;
+        if (ev.type === 'high' && !nextHigh) nextHigh = ev;
+        if (ev.type === 'low' && !nextLow) nextLow = ev;
+        if (nextEvent && nextHigh && nextLow) break;
+      }
+      var state = nextEvent ? (nextEvent.type === 'high' ? 'rising' : 'falling') : null;
+
+      var todayEvents = [];
+      for (var q = 0; q < events.length; q++) {
+        if (events[q].day === todayStr) todayEvents.push(events[q]);
+      }
+
+      var currentLevel = (marine.current && isNum(marine.current.sea_level_height_msl))
+        ? marine.current.sea_level_height_msl : null;
+      if (currentLevel === null) {
+        var bestD = Infinity;
+        for (var ww = 0; ww < pts.length; ww++) {
+          var dd = Math.abs(pts[ww].epoch - nowMs);
+          if (dd < bestD) { bestD = dd; currentLevel = pts[ww].v; }
+        }
+      }
+
+      return {
+        state: state,
+        currentLevel: currentLevel,
+        nextEvent: nextEvent,
+        nextHigh: nextHigh,
+        nextLow: nextLow,
+        todayEvents: todayEvents,
+        svg: tideSvg(pts, todayStr, nowHour, todayEvents)
+      };
+    }
+
+    function tideSvg(pts, todayStr, nowHour, events) {
+      var VB_W = 720, VB_H = 184, PAD_L = 12, PAD_R = 12, TOP = 40, BOT = 138;
+      var curve = [];
+      for (var i = 0; i < pts.length; i++) {
+        if (pts[i].day === todayStr) curve.push(pts[i]);
+      }
+      for (var n = 0; n < pts.length; n++) {
+        if (pts[n].day !== todayStr && pts[n].hour === 0) { curve.push(pts[n]); break; }
+      }
+      if (curve.length < 2) return '';
+
+      var vs = [];
+      for (var v = 0; v < curve.length; v++) vs.push(curve[v].v);
+      var lo = Math.min.apply(null, vs);
+      var hi = Math.max.apply(null, vs);
+      var span = hi - lo;
+      if (!(span > 0)) span = 1;
+      var pad = span * 0.16;
+      lo -= pad; hi += pad;
+
+      function X(hourF) {
+        var t = hourF < 0 ? 0 : (hourF > 24 ? 24 : hourF);
+        return PAD_L + (t / 24) * (VB_W - PAD_L - PAD_R);
+      }
+      function Y(val) { return BOT - ((val - lo) / (hi - lo)) * (BOT - TOP); }
+
+      var line = [], area = [];
+      for (var c2 = 0; c2 < curve.length; c2++) {
+        var px = X(curve[c2].hour).toFixed(1);
+        var py = Y(curve[c2].v).toFixed(1);
+        line.push(px + ',' + py);
+        area.push(px + ',' + py);
+      }
+      area.push(X(curve[curve.length - 1].hour).toFixed(1) + ',' + BOT);
+      area.push(X(curve[0].hour).toFixed(1) + ',' + BOT);
+
+      var s = '<svg class="weather-curve" viewBox="0 0 ' + VB_W + ' ' + VB_H + '" preserveAspectRatio="xMidYMid meet" aria-hidden="true">';
+      s += '<defs><linearGradient id="w-tide-grad" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0%" stop-color="var(--color-water-500)" stop-opacity="0.4"/>' +
+        '<stop offset="100%" stop-color="var(--color-water-500)" stop-opacity="0.03"/></linearGradient></defs>';
+      s += '<line x1="' + PAD_L + '" y1="' + BOT + '" x2="' + (VB_W - PAD_R) + '" y2="' + BOT + '" stroke="var(--border-color)" stroke-width="1" stroke-dasharray="3 4"/>';
+      s += '<polygon points="' + area.join(' ') + '" fill="url(#w-tide-grad)"/>';
+      s += '<polyline points="' + line.join(' ') + '" fill="none" stroke="var(--color-water-600)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+
+      var nx = X(nowHour);
+      s += '<line x1="' + nx.toFixed(1) + '" y1="' + (TOP - 8) + '" x2="' + nx.toFixed(1) + '" y2="' + BOT + '" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/>';
+      s += '<text x="' + nx.toFixed(1) + '" y="' + (TOP - 14) + '" text-anchor="middle" font-size="12" font-weight="700" fill="var(--accent)">' + esc((W.tide || {}).now || '') + '</text>';
+
+      for (var e = 0; e < events.length; e++) {
+        var ev = events[e];
+        var cx = X(ev.hour), cy = Y(ev.value);
+        s += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="3.6" fill="var(--color-water-700)" stroke="var(--bg-tertiary)" stroke-width="1.5"/>';
+        var ly = ev.type === 'high' ? cy - 10 : cy + 18;
+        s += '<text x="' + cx.toFixed(1) + '" y="' + ly.toFixed(1) + '" text-anchor="middle" font-size="12" fill="var(--text-muted)">' + esc(ev.hhmm) + '</text>';
+      }
+
+      var ticks = [0, 6, 12, 18, 24];
+      for (var t = 0; t < ticks.length; t++) {
+        var hr = ticks[t];
+        var anchor = hr === 0 ? 'start' : (hr === 24 ? 'end' : 'middle');
+        s += '<text x="' + X(hr).toFixed(1) + '" y="' + (BOT + 20) + '" text-anchor="' + anchor + '" font-size="12" fill="var(--text-muted)">' + hr + '</text>';
+      }
+      s += '</svg>';
+      return s;
+    }
+
+    function renderTide(tide) {
+      if (!elTide) return;
+      if (!tide) { elTide.classList.add('weather-hidden'); return; }
+      elTide.classList.remove('weather-hidden');
+      var T = W.tide || {};
+
+      if (elTideState) {
+        if (tide.state) {
+          setText(elTideState, tide.state === 'rising' ? (T.stateRising || '') : (T.stateFalling || ''));
+          elTideState.classList.remove('weather-hidden');
+        } else {
+          elTideState.classList.add('weather-hidden');
+        }
+      }
+
+      if (elTideChips) {
+        var chips = [];
+        if (isNum(tide.currentLevel)) chips.push([T.nowLevel, tide.currentLevel.toFixed(2) + ' m']);
+        if (tide.nextHigh) chips.push([T.nextHigh, withHint(tide.nextHigh)]);
+        if (tide.nextLow) chips.push([T.nextLow, withHint(tide.nextLow)]);
+        elTideChips.innerHTML = chips.map(function (c) {
+          return '<div class="weather-chip"><span class="weather-chip-label">' + esc(c[0]) +
+            '</span><span class="weather-chip-value">' + esc(c[1]) + '</span></div>';
+        }).join('');
+        elTideChips.classList.toggle('weather-hidden', chips.length === 0);
+      }
+
+      if (elTideAdvice) {
+        var msg = '';
+        if (tide.state && tide.nextHigh && tide.nextLow) {
+          var rising = tide.state === 'rising';
+          var target = rising ? tide.nextHigh : tide.nextLow;
+          var mins = Math.max(1, Math.round((target.epoch - Date.now()) / 60000));
+          msg = rep(rising ? T.adviceRising : T.adviceFalling, {
+            dur: durText(mins),
+            high: tide.nextHigh.hhmm,
+            low: tide.nextLow.hhmm
+          });
+        }
+        setText(elTideAdvice, msg);
+        elTideAdvice.classList.toggle('weather-hidden', !msg);
+      }
+
+      if (elTideCurve) elTideCurve.innerHTML = tide.svg || '';
+      if (elTideCurveTitle) elTideCurveTitle.classList.toggle('weather-hidden', !tide.svg);
+
+      var evs = tide.todayEvents || [];
+      if (elTideEventsTitle) elTideEventsTitle.classList.toggle('weather-hidden', evs.length === 0);
+      if (elTideEvents) {
+        elTideEvents.classList.toggle('weather-hidden', evs.length === 0);
+        elTideEvents.innerHTML = evs.map(function (e) {
+          var isHigh = e.type === 'high';
+          var isNext = tide.nextEvent && e.epoch === tide.nextEvent.epoch;
+          return '<li class="weather-tide-event' + (isNext ? ' is-next' : '') + '">' +
+            '<span class="weather-tide-event-head">' + (isHigh ? '⬆️' : '⬇️') + ' ' + esc(isHigh ? (T.high || '') : (T.low || '')) + '</span>' +
+            '<span class="weather-tide-event-time">' + esc(e.hhmm) + '</span>' +
+            '<span class="weather-tide-event-val">' + esc(e.value.toFixed(2) + ' m') + '</span>' +
+            '</li>';
+        }).join('');
+      }
+    }
+
+    function showError() {
+      setText(elTemp, '—');
+      setText(elDesc, W.error || '');
+    }
+
+    setText(elTemp, W.loading || '…');
+
+    var forecastReq = fetch(FORECAST_URL, { cache: 'no-store' }).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    });
+    var marineReq = fetch(MARINE_URL, { cache: 'no-store' })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .catch(function () { return null; });
+
+    Promise.all([forecastReq, marineReq])
+      .then(function (results) {
+        var data = results[0] || {};
+        var ctx = buildCtx(data.current, data.daily, results[1]);
+        var groups = buildGroups(ctx);
+        renderCurrent(ctx);
+        renderChips(ctx);
+        renderRisk(groups);
+        renderAdvice(groups);
+        renderMarine(ctx);
+        renderTide(buildTide(results[1]));
+        renderForecast(data.daily);
+      })
+      .catch(showError);
+  })();
+</script>

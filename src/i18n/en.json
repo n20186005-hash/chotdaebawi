@@ -36,6 +36,8 @@
   },
   "stickyNav": {
     "facts": "Key Facts",
+    "weather": "Weather · Tips",
+    "tide": "Tide",
     "etiquette": "Coastal Etiquette",
     "route": "Half-Day Route",
     "transport": "Getting There",
@@ -88,6 +90,146 @@
       { "icon": "📍", "label": "Location / Location", "value": "37°28′N, 129°10′E", "note": "Plus Code: F5H6+P2 Donghae. At the north end of Chuam Beach, next to Chuam Suspension Bridge and Grandmother Rock." },
       { "icon": "🌉", "label": "Nearby / Nearby", "value": "Chuam Bridge", "note": "The Chuam Suspension Bridge (출렁다리), about 72 m long, opened in 2024 across the sea, linking the rock, Grandmother Rock and the coastal trail into one popular route." }
     ]
+  },
+  "weather": {
+    "eyebrow": "Live weather · Travel advice",
+    "title": "Live Weather & 7-Day Forecast",
+    "subtitle": "We don't just show the numbers — we tell you what to actually do about them.",
+    "attributionLabel": "Weather data · Open-Meteo",
+    "loading": "Loading…",
+    "error": "Weather is unavailable right now.",
+    "updatedAt": "Updated",
+    "metrics": {
+      "feelsLike": "Feels like",
+      "precip": "Rain chance",
+      "wind": "Wind",
+      "humidity": "Humidity",
+      "uv": "UV"
+    },
+    "uvLevels": ["Low", "Moderate", "High", "Very high", "Extreme"],
+    "windUnit": "m/s",
+    "windLevelSuffix": "",
+    "forecastTitle": "7-day forecast",
+    "forecastPopLabel": "Rain",
+    "adviceTitle": "Travel advice",
+    "adviceHint": "Only the tips that matter for today's weather.",
+    "riskTitle": "Risk alert",
+    "riskHint": "Consider adjusting your plans for safety.",
+    "emptyAdvice": "No special precautions today.",
+    "tabs": { "outfit": "What to wear", "plan": "What to do", "items": "What to bring" },
+    "weekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "marine": {
+      "title": "Beach & sea conditions",
+      "wave": "Wave height",
+      "period": "Wave period",
+      "seaTemp": "Sea temp",
+      "note": "Chuam is a coast of sand and rocks. Check the water temperature and waves before getting in, and stay off the rocks at high tide."
+    },
+    "tide": {
+      "title": "Tide",
+      "now": "Now",
+      "stateRising": "Rising",
+      "stateFalling": "Falling",
+      "nextHigh": "Next high tide",
+      "nextLow": "Next low tide",
+      "high": "High tide",
+      "low": "Low tide",
+      "nowLevel": "Current level",
+      "curveTitle": "Tide level today",
+      "eventsTitle": "Today's high & low tides",
+      "adviceRising": "The tide is coming in. High tide is at {high} ({dur} from now) and the coastal rocks will be submerged — stay away from them. For tidal-flat exploring, wait until after low tide at {low}.",
+      "adviceFalling": "The tide is going out. From about {low} (low tide, {dur} from now), the next 1–2 hours are best for tidal-flat exploring and shell hunting. Be sure to leave the rocks before high tide at {high}.",
+      "timeFmt": "{h}h {m}m",
+      "timeFmtMin": "{m}m",
+      "note": "Tide values are hourly predictions and may differ from the actual tide times by about 30 minutes."
+    },
+    "cond": {
+      "0": "Clear", "1": "Mainly clear", "2": "Partly cloudy", "3": "Overcast",
+      "45": "Fog", "48": "Dense fog",
+      "51": "Drizzle", "53": "Drizzle", "55": "Drizzle", "56": "Freezing drizzle", "57": "Freezing drizzle",
+      "61": "Light rain", "63": "Rain", "65": "Heavy rain", "66": "Freezing rain", "67": "Freezing rain",
+      "71": "Light snow", "73": "Snow", "75": "Heavy snow", "77": "Snow grains",
+      "80": "Showers", "81": "Showers", "82": "Heavy showers",
+      "85": "Snow showers", "86": "Snow showers",
+      "95": "Thunderstorm", "96": "Thunderstorm", "99": "Severe thunderstorm"
+    },
+    "advice": {
+      "rain60": {
+        "outfit": "Rain is likely — bring rain gear.",
+        "plan": "Stick to indoor spots; postpone hiking and beach plans.",
+        "items": "Umbrella, raincoat"
+      },
+      "lightRain": {
+        "outfit": "Light rain — paths get slippery, watch your step.",
+        "plan": "Outdoor activities will be a bit disappointing.",
+        "items": "Folding umbrella"
+      },
+      "heavyRain": {
+        "risk": "Heavy rain — avoid valleys and low-lying areas.",
+        "plan": "Skip outdoor tours; boats and cable cars may shut down.",
+        "items": "Raincoat; skip long umbrellas (windy)"
+      },
+      "thunder": {
+        "risk": "Lightning risk — no hiking, no swimming, and don't shelter under trees.",
+        "plan": "Water activities are likely closed."
+      },
+      "heat": {
+        "outfit": "It's hot — avoid heading out at midday.",
+        "plan": "Keep outdoor time short.",
+        "items": "Sunscreen, plenty of water, heat-relief items"
+      },
+      "uv": {
+        "outfit": "UV is strong — protect your skin.",
+        "items": "Sunscreen, sunglasses, sun hat"
+      },
+      "diurnal": {
+        "outfit": "Big day-night temperature gap — bring a layer you can add or remove."
+      },
+      "cold": {
+        "outfit": "It's cold — dress for warmth.",
+        "items": "Thick coat, scarf"
+      },
+      "wind56": {
+        "outfit": "Fairly windy — wear windproof layers.",
+        "plan": "Boat trips and some outdoor rides may be suspended.",
+        "items": "Hats blow off; skip loose long skirts"
+      },
+      "wind7": {
+        "risk": "Strong wind — stay clear of signs and coastal rocks.",
+        "plan": "Offshore outdoor activities are likely closed."
+      },
+      "sunny": {
+        "outfit": "Clear and sunny — perfect for outdoor sightseeing.",
+        "plan": "Great for sunrise and sunset views.",
+        "items": "Don't forget sunscreen"
+      },
+      "cloudy": {
+        "outfit": "Soft light — great for photos.",
+        "plan": "No harsh sun, so long walks are comfortable."
+      },
+      "fog": {
+        "risk": "Low visibility — ferries and flights may be delayed.",
+        "plan": "Not a good time for sea or mountain views.",
+        "items": "Face mask"
+      },
+      "snow": {
+        "risk": "Snow — roads may freeze, watch your step.",
+        "outfit": "Keep warm and wear non-slip shoes.",
+        "items": "Gloves, hand warmers"
+      },
+      "beachWave": {
+        "risk": "High waves — rocks are slippery, don't swim or get close.",
+        "plan": "Postpone beach play and tide-pool exploring."
+      },
+      "beachCalm": {
+        "plan": "Calm waves — nice for splashing on the sand; still mind the tide near the rocks."
+      },
+      "beachCold": {
+        "items": "The sea is cold — swim with care and bring a change of clothes."
+      }
+    }
   },
   "hiddenRules": {
     "title": "Coast & Rock Safety Tips",
