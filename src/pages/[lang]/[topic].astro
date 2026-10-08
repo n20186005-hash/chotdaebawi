@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getI18n, languagesList } from '../../i18n/ui';
+import { topics } from '../../i18n/topics';
+
+export function getStaticPaths() {
+  return languagesList.flatMap((lang) =>
+    Object.keys(topics[lang]).map((slug) => ({
+      params: { lang, topic: slug },
+    }))
+  );
+}
+
+const { lang, messages } = getI18n(Astro.url);
+const slug = Astro.params.topic as string;
+const t = topics[lang][slug];
+const b = messages.breadcrumb;
+
+const relatedTitles: Record<string, string> = {
+  ko: '관련 가이드',
+  en: 'Related guides',
+  zh: '相關指南',
+  ja: '関連ガイド',
+};
+const faqTitles: Record<string, string> = {
+  ko: '자주 묻는 질문',
+  en: 'Frequently asked questions',
+  zh: '常見問題',
+  ja: 'よくある質問',
+};
+const backTitles: Record<string, string> = {
+  ko: '메인 가이드로',
+  en: 'Back to main guide',
+  zh: '返回主指南',
+  ja: 'メインガイドへ',
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: t.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
+const otherTopics = Object.keys(topics[lang]).filter((s) => s !== slug);
+---
+
+<BaseLayout title={t.title} description={t.description} path={slug}>
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href={`/${lang}/`} itemprop="item"><span itemprop="name">{b.home}</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">{t.title}</span>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <article class="section-padding" style="background: var(--bg-primary);">
+    <div class="max-w-3xl mx-auto px-4">
+      <header class="mb-10">
+        <h1 class="font-display text-3xl sm:text-4xl font-bold mb-4" style="color: var(--text-primary);">{t.title}</h1>
+        <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{t.intro}</p>
+      </header>
+
+      {t.sections.map((s) => (
+        <section class="mb-10">
+          <h2 class="font-display text-xl sm:text-2xl font-semibold mb-3" style="color: var(--text-primary);">{s.heading}</h2>
+          <p class="text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">{s.body}</p>
+        </section>
+      ))}
+
+      <section class="mb-10">
+        <h2 class="font-display text-xl sm:text-2xl font-semibold mb-4" style="color: var(--text-primary);">{faqTitles[lang]}</h2>
+        <div class="space-y-3">
+          {t.faq.map((item) => (
+            <details class="rounded-2xl border p-4" style="border-color: var(--border-color); background: var(--card-bg);">
+              <summary class="font-medium cursor-pointer" style="color: var(--text-primary);">{item.q}</summary>
+              <p class="mt-3 text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-6">
+        <h2 class="font-display text-lg font-semibold mb-4" style="color: var(--text-primary);">🧭 {relatedTitles[lang]}</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {otherTopics.map((s) => (
+            <a href={`/${lang}/${s}/`} class="rounded-2xl border p-4 hover:opacity-80 transition" style="border-color: var(--border-color); color: var(--text-primary); background: var(--card-bg);">
+              {topics[lang][s].title}
+            </a>
+          ))}
+          <a href={`/${lang}/`} class="rounded-2xl border p-4 hover:opacity-80 transition" style="border-color: var(--accent); color: var(--accent); background: var(--card-bg);">
+            ← {backTitles[lang]}
+          </a>
+        </div>
+      </section>
+    </div>
+  </article>
+</BaseLayout>

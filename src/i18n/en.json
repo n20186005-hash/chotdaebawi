@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Chuam Chotdaebawi Rock, Donghae | Sunrise Spot & Travel Guide",
-    "description": "Plan your visit to Chuam Chotdaebawi Rock, Donghae: sunrise times, suspension bridge, KTX and bus routes, parking, free entry and photo spots."
+    "title": "Chuam Chotdaebawi Rock | Sunrise & Visitor Guide",
+    "description": "Plan your visit to Chuam Chotdaebawi Rock in Donghae, South Korea. Explore sunrise viewpoints, free admission, parking, directions, Chuam Beach and the suspension bridge."
   },
   "header": {
     "siteName": "Chuam Chotdaebawi Rock",
@@ -69,15 +69,13 @@
     ],
     "navCta": { "label": "📍 Navigate", "href": "#transport" },
     "photoCta": { "label": "📸 Photo spots", "href": "#gallery" },
-    "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" },
-    "sunsetPlanner": {
-      "eyebrow": "Golden Hour Calculator · Light Tool",
-      "title": "Based on today's sunset, we suggest arriving about 60 minutes earlier to catch both the softest diffuse light and the blue-hour seascape.",
-      "note": "The rock faces due east; soft front-light is best from early morning to noon. On peak summer weekends, allow extra time to avoid the crowds.",
-      "seaGlare": "Sea Glare correction: Chuam faces the east sea, so at dawn the pillar is back-lit in silhouette while the sea glows gold-red; from morning to noon it turns front-lit and the rock and pine detail are clearest — the golden window to frame 'candle – pine – sea' together.",
+    "liveInfo": { "weather": "Current weather", "sunrise": "Tomorrow's sunrise" },
+    "sunrisePlanner": {
+      "eyebrow": "Dawn Planning · Light Tool",
+      "title": "We suggest arriving about 40 minutes before tomorrow's sunrise, so you can also catch the soft pre-dawn glow before the reddest light.",
+      "note": "The rock faces the open east sea, so the sunrise rises largest above the horizon at dawn. If the weather is poor for the sea, shift focus to Chuam Bridge or Donghae's food streets.",
       "arriveLabel": "Suggested arrival",
-      "blueHourLabel": "Blue hour",
-      "lightTimeline": "Backlight at dawn · Golden glare after 15:00 · Ends in blue hour"
+      "azimuthLabel": "Sunrise bearing"
     }
   },
   "quickFactsDashboard": {
@@ -89,7 +87,7 @@
       { "icon": "🎬", "label": "Anthem / Anthem", "value": "Aegukga backdrop", "note": "Chuam Chotdaebawi is the seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i' — a symbol beyond scenery, written into national memory." },
       { "icon": "🆓", "label": "Admission / Admission", "value": "0 KRW", "note": "A public seaside area, free and open long-term, no ticket or reservation; public parking and a sea-view walkway are provided." },
       { "icon": "📍", "label": "Location / Location", "value": "37°28′N, 129°10′E", "note": "Plus Code: F5H6+P2 Donghae. At the north end of Chuam Beach, next to Chuam Suspension Bridge and Grandmother Rock." },
-      { "icon": "🌉", "label": "Nearby / Nearby", "value": "Chuam Bridge", "note": "The Chuam Suspension Bridge (출렁다리), about 72 m long, opened in 2024 across the sea, linking the rock, Grandmother Rock and the coastal trail into one popular route." }
+      { "icon": "🌉", "label": "Nearby / Nearby", "value": "Chuam Bridge", "note": "The Chuam Suspension Bridge (출렁다리), about 72 m long, was installed in June 2019 across the sea, linking the rock, Grandmother Rock and the coastal trail into one popular route." }
     ]
   },
   "weather": {
@@ -289,7 +287,7 @@
     "steps": [
       { "title": "[Start] Chuam Beach stroll & wading", "meta": "Coast · ~40 min", "text": "Gather supplies and use the restroom on the soft sand, stroll and wade along the Chuam coast, leaving the soft morning light for the sea and distant hills.", "tips": ["Gently sloped coast, good for warm-up and photos."] },
       { "title": "[Main] Chotdaebawi & Grandmother Rock", "meta": "Core experience · ~40 min", "text": "Walk the trail to the best rock viewpoint, look up at the candle rock crowned by a lone pine, and frame it with the facing Grandmother Rock — reading the century-old legend of watchful waiting.", "tips": ["The rock silhouette is most beautiful around sunrise; schedule this segment early."] },
-      { "title": "[Extend] Chuam Suspension Bridge (출렁다리)", "meta": "Sea trail · ~30 min", "text": "Walk to the 2024 Chuam Suspension Bridge and look down at the candle rock and open East Sea from the 72 m swinging sea trail.", "tips": ["The bridge sways gently; hold on and do not run."] },
+      { "title": "[Extend] Chuam Suspension Bridge (출렁다리)", "meta": "Sea trail · ~30 min", "text": "Walk to the 2019 Chuam Suspension Bridge and look down at the candle rock and open East Sea from the 72 m swinging sea trail.", "tips": ["The bridge sways gently; hold on and do not run."] },
       { "title": "[Refuel] Donghae city food", "meta": "Food stop · ~50 min", "text": "Leave the coast for Donghae city to taste Gangwon seafood, squid and local snacks, linking the coast trip to local flavors.", "tips": ["If the coast is crowded, have dinner in the city to avoid the rush."] },
       { "title": "[End] Sunset or return", "meta": "Wrap · ~60 min+", "text": "If time allows, return to Chuam at dusk for the coast lights, or take a bus / taxi back, wrapping this into a complete 'rock + bridge + food' half-day package.", "tips": ["In peak season, treat the market and night view as flexible add-ons."] }
     ],
@@ -297,7 +295,7 @@
   },
   "intro": {
     "title": "Getting to Know Chuam Chotdaebawi Rock",
-    "description": "Chuam Chotdaebawi Rock (추암 촛대바위) sits at the north end of Chuam Beach, Donghae-si, Gangwon-do — a naturally formed sea stack rising about 10 m from the sea and crowned by a red pine. 'Chotdaebawi' means 'candlestick stone', named for its resemblance to a giant candlestick planted in the sea. Beside it stand a dozen other fantastically shaped rocks, and across the water the 'Grandmother Rock' (해안정) keeps watch. More importantly, it holds a rare public narrative: how a lone sea rock became the seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i', and how it carries a city and a nation's sunrise ritual and collective memory.",
+    "description": "Chuam Chotdaebawi Rock (추암 촛대바위) sits at the north end of Chuam Beach, Donghae-si, Gangwon-do — a naturally formed sea stack rising about 10 m from the sea and crowned by a red pine. 'Chotdaebawi' means 'candlestick stone', named for its resemblance to a giant candlestick planted in the sea. Beside it stand a dozen other fantastically shaped rocks, and across the water the 'Grandmother Rock' (할머니바위) keeps watch. More importantly, it holds a rare public narrative: how a lone sea rock became the seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i', and how it carries a city and a nation's sunrise ritual and collective memory.",
     "visitGuide": {
       "title": "Visit Guide",
       "eyebrow": "Practical Planning",
@@ -316,7 +314,7 @@
         "The seaside backdrop of the first line of Korea's national anthem, 'Dong-hae mul-gwa Baek-du-san-i'",
         "Facing due east, a representative Gangwon New Year sunrise (해맞이) spot",
         "Keeping watch with the 'Grandmother Rock', a century-old legend of waiting",
-        "Next to the 2024 Chuam Suspension Bridge (출렁다리), free and open"
+        "Next to the 2019 Chuam Suspension Bridge (출렁다리), free and open"
       ]
     }
   },
@@ -517,12 +515,12 @@
       {
         "id": "legend",
         "title": "The legend of Grandmother Rock: a watch on the sea",
-        "content": "Across the water from Chotdaebawi stands the 'Grandmother Rock' (해안정, also called 할머니바위 / Grandmother Rock), with a touching legend: a wife stood by the sea day after day gazing at her husband who sailed out and never returned, finally turning into a great rock in the sea. The composition of Chotdaebawi and Grandmother Rock facing each other is the most direct footnote to this legend, adding a gentle human warmth to Chuam."
+        "content": "Across the water from Chotdaebawi stands the 'Grandmother Rock' (할머니바위), with a touching legend: a wife stood by the sea day after day gazing at her husband who sailed out and never returned, finally turning into a great rock in the sea. The composition of Chotdaebawi and Grandmother Rock facing each other is the most direct footnote to this legend, adding a gentle human warmth to Chuam."
       },
       {
         "id": "bridge",
         "title": "Chuam Bridge: a new landmark on the sea",
-        "content": "The Chuam Suspension Bridge (출렁다리), about 72 m long, opened in 2024 across the sea, swaying gently with the waves like a ribbon floating above the East Sea. It weaves the candle rock, Grandmother Rock and coastal trail into one walking experience — Donghae's most recognizable recent landmark, completing the 'view the rock from the bridge' angle."
+        "content": "The Chuam Suspension Bridge (출렁다리), about 72 m long, was installed in June 2019 across the sea, swaying gently with the waves like a ribbon floating above the East Sea. It weaves the candle rock, Grandmother Rock and coastal trail into one walking experience — Donghae's most recognizable recent landmark, completing the 'view the rock from the bridge' angle. Note that the bridge and Chuam Beach have their own managed hours (daytime operation, peak-season and weather limits), so check on-site notices. The guide address (28 Chotdaebawi-gil) points to the bridge and public-parking entrance area."
       },
       {
         "id": "modern",
@@ -589,7 +587,7 @@
       "Chotdaebawi in morning front-light, rock and pine detail clearest.",
       "Chuam Suspension Bridge (출렁다리) across the sea, like a ribbon on the East Sea.",
       "Overlooking Chotdaebawi and Grandmother Rock together from the bridge deck.",
-      "Grandmother Rock (해안정) facing Chotdaebawi across the water, a century-old legend.",
+      "Grandmother Rock (할머니바위) facing Chotdaebawi across the water, a century-old legend.",
       "Tidal flat at low tide with shellfish and foraging shorebirds.",
       "Blue-and-white coastal scenery, echoing Donghae's peninsular port palette.",
       "Classic composition using the coast as a lead-in to rock and skyline.",
@@ -764,7 +762,7 @@
         "id": "nearby",
         "title": "Nearby Links",
         "items": [
-          { "q": "What else is worth visiting nearby?", "a": "From Chuam you can link Chuam Bridge (출렁다리, swinging sea trail), Grandmother Rock (해안정, watch legend), Donghae seafood street (squid and local food), Samcheok coastal rail trail (해안트레일) and Gangneung Gyeongpo Beach, forming a Donghae 'rock – bridge – food – coastline' half-day route." }
+          { "q": "What else is worth visiting nearby?", "a": "From Chuam you can link Chuam Bridge (출렁다리, swinging sea trail), Grandmother Rock (할머니바위, watch legend), Donghae seafood street (squid and local food), Samcheok coastal rail trail (해안트레일) and Gangneung Gyeongpo Beach, forming a Donghae 'rock – bridge – food – coastline' half-day route." }
         ]
       }
     ]
@@ -775,7 +773,7 @@
     "toursTitle": "Recommended Experiences",
     "attractions": [
       { "name": "Chuam Bridge (출렁다리 swinging sea trail)", "url": "https://www.dh.go.kr/tour" },
-      { "name": "Grandmother Rock (해안정 watch legend)", "url": "https://english.visitkorea.or.kr" },
+      { "name": "Grandmother Rock (할머니바위 watch legend)", "url": "https://english.visitkorea.or.kr" },
       { "name": "Donghae Beach (동해해수욕장)", "url": "https://www.dh.go.kr/tour" },
       { "name": "Samcheok Coastal Rail Trail (삼척 해안트레일)", "url": "https://english.visitkorea.or.kr" },
       { "name": "Gangneung Gyeongpo Beach (강릉 경포해변)", "url": "https://www.gangwon.to" }

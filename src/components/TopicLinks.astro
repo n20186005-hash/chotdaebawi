@@ -1,0 +1,39 @@
+---
+import { getI18n } from '../i18n/ui';
+import { topics } from '../i18n/topics';
+
+const { lang } = getI18n(Astro.url);
+const list = Object.entries(topics[lang]).map(([slug, c]) => ({
+  slug,
+  title: c.title,
+  description: c.description,
+}));
+
+const titles: Record<string, string> = {
+  ko: '심층 가이드',
+  en: 'In-depth guides',
+  zh: '深度指南',
+  ja: '詳細ガイド',
+};
+const subtitles: Record<string, string> = {
+  ko: '촛대바위와 추암을 더 자세히: 일출, 주차·교통, 해변, 출렁다리',
+  en: 'More on Chotdaebawi & Chuam: sunrise, parking & transit, beach, suspension bridge',
+  zh: '更深入了解燭台岩與楚岩：日出、停車交通、海灘、吊橋',
+  ja: '燭台岩と楚岩をもっと：日の出、駐車・アクセス、ビーチ、吊橋',
+};
+---
+
+<section class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="font-display text-2xl sm:text-3xl font-bold mb-2" style="color: var(--text-primary);">{titles[lang]}</h2>
+    <p class="mb-6 text-sm sm:text-base" style="color: var(--text-secondary);">{subtitles[lang]}</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {list.map((it) => (
+        <a href={`/${lang}/${it.slug}/`} class="block rounded-2xl border p-5 hover:opacity-85 transition" style="border-color: var(--border-color); background: var(--card-bg); color: var(--text-primary);">
+          <h3 class="font-display text-base font-semibold mb-2" style="color: var(--text-primary);">{it.title}</h3>
+          <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">{it.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

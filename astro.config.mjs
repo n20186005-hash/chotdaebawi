@@ -6,6 +6,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://chotdaebawi.com',
   output: 'static',
+  // 统一所有 URL 带尾斜杠，避免 /ko 与 /ko/ 被 Google 当成不同网址
+  trailingSlash: 'always',
   i18n: {
     defaultLocale: 'ko',
     locales: ['zh', 'en', 'ja', 'ko'],
