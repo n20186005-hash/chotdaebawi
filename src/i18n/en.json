@@ -47,7 +47,7 @@
   },
   "hero": {
     "title": "Chuam Chotdaebawi Rock (Candlestick Rock), Donghae",
-    "subtitle": "A naturally formed candlestick-shaped sea stack rising from the waters off Donghae, Gangwon-do — one of Korea's most iconic sunrise spots. A lone pine crowns the pillar, keeping watch with the 'Grandmother Rock'; it appears as the backdrop of the first line of Korea's national anthem and lives in the shared memory of countless Koreans. Address: 28 Chotdaebawi-gil, Donghae-si; open 24 hours, free admission, with public parking and the Chuam suspension bridge next door.",
+    "subtitle": "A naturally formed candlestick-shaped sea stack rising from the waters off Donghae, Gangwon-do — one of Korea's most iconic sunrise spots. A lone pine crowns the pillar, keeping watch with the 'Grandmother Rock'; it appears as the backdrop of the first line of Korea's national anthem and lives in the shared memory of countless Koreans. Address: 28 Chotdaebawi-gil, Donghae-si; open 24 hours, free admission, with public parking and the Chuam suspension bridge next door. The suspension bridge has separate operating hours and may close in bad weather; check before visiting, especially at dawn.",
     "rating": "4.4 (10,408)",
     "reviewCount": "10,408 reviews",
     "hours": "Open 24 hours (public seaside area)",
@@ -73,7 +73,7 @@
     "sunrisePlanner": {
       "eyebrow": "Dawn Planning · Light Tool",
       "title": "We suggest arriving about 40 minutes before tomorrow's sunrise, so you can also catch the soft pre-dawn glow before the reddest light.",
-      "note": "The rock faces the open east sea, so the sunrise rises largest above the horizon at dawn. If the weather is poor for the sea, shift focus to Chuam Bridge or Donghae's food streets.",
+      "note": "For sunrise, use a safe coastal viewpoint. In poor weather consider an indoor stop; check bridge conditions and notices before visiting.",
       "arriveLabel": "Suggested arrival",
       "azimuthLabel": "Sunrise bearing"
     }
@@ -386,8 +386,8 @@
         "description": "Good with children, seniors, lots of luggage or a Gangwon tour; several public lots surround the coast.",
         "details": [
           "Set destination to '추암 촛대바위' or address '강원특별자치도 동해시 촛대바위길 28'.",
-          "Coast public parking about 1,000 KRW / hour, daily cap about 5,000 KRW (2024 basis); still fills in peak season.",
-          "Some public lots have EV chargers; coastal wind is strong, mind crosswinds and parking."
+          "Check current rates and availability on site.",
+          "Check charging locations and availability independently before travel."
         ],
         "steps": [
           { "n": "1", "t": "Navigate to 'Chuam Chotdaebawi Rock' or 'Chuam Beach parking'." },
@@ -440,24 +440,20 @@
       }
     ],
     "parking": {
-      "title": "Parking & Charging Overview",
-      "note": "Several public parking lots surround Chuam; below are the nearest main options. Rates and availability vary by season and time — follow on-site signs (2024 basis: small car about 1,000 KRW / hour, daily cap about 5,000 KRW).",
+      "title": "Parking",
+      "note": "Check current parking signs for rates and availability. VisitKorea lists accessible parking at the entrance to Chuam Beach, 26 Chotdaebawi-gil; the rock/bridge area is listed separately at 28.",
       "colOption": "Option",
-      "colDistance": "Distance",
-      "colPrice": "Price",
+      "colDistance": "Address",
+      "colPrice": "Details",
       "options": [
-        { "name": "Chuam Beach public parking", "distance": "about 100–300 m (to rock walkway)", "price": "Public paid, lower rate, fills in peak" },
-        { "name": "Chuam Bridge parking", "distance": "about 300–500 m", "price": "Park annex parking, more spaces but tight in peak" },
-        { "name": "Surrounding street parking", "distance": "about 200–500 m", "price": "Roadside / small lots, few spaces, easier off-peak" },
-        { "name": "Donghae city parking", "distance": "about 1.5–2.5 km", "price": "City / mall parking, tight on holidays" },
-        { "name": "Drop-off (coast entrance)", "distance": "about 100 m", "price": "Short stop only, no spaces" }
+        {"name": "Chuam Beach entrance", "distance": "26 Chotdaebawi-gil", "price": "Accessible parking listed; confirm on arrival"}
       ],
-      "disclaimer": "Coast roads are extremely congested on holidays and peak season; do not block bus and fire lanes. EV chargers are common at seaside public lots and Chuam Bridge parking; rates and limits may change — check posted signs."
+      "disclaimer": "Check signs on arrival and do not block access or emergency routes. Check charging availability independently before travelling."
     },
     "driverFaqTitle": "Transport Q&A",
     "driverFaq": [
-      { "q": "Is there parking near Chuam?", "a": "Several public lots surround the coast, such as Chuam Beach public parking and Chuam Bridge parking, within walking distance. They fill fast on peak weekends — arrive early or park further out and walk the last stretch." },
-      { "q": "What is the nearest parking?", "a": "Chuam Beach public parking is about 100–300 m away, the closest to the rock walkway; Chuam Bridge parking is about 300–500 m, more spaces but tight in peak." },
+      { "q": "Is there parking near Chuam?", "a": "Chuam Beach has entrance parking listed by VisitKorea; confirm availability and rates on site." },
+      { "q": "What is the nearest parking?", "a": "Check the actual route and parking signs on arrival." },
       { "q": "Is there roadside parking nearby?", "a": "Very little. Coast roads are narrow and congested on holidays; use proper lots and public transit, no long roadside parking." },
       { "q": "Is driving recommended for Chuam?", "a": "Unless parking is essential, driving is not advised. Weekends and peak season are very congested; walking or transit is smoother. If driving, park at a surrounding lot then walk in." },
       { "q": "Do you recommend public transit?", "a": "Strongly. Take KTX / express bus to Donghae, then city bus or taxi to Chuam and walk in. Address: 28 Chotdaebawi-gil, Donghae-si, Gangwon-do, South Korea." },
@@ -473,7 +469,7 @@
     "mapsUrl": "https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9",
     "bestTime": {
       "title": "Best time to arrive",
-      "text": "Chuam is accessible all day, but the photo ceiling is the dawn sunrise window. Arrive about 30–60 min before sunrise; if weather is poor for the sea, shift focus to Chuam Bridge, Donghae city food or nearby Gangneung / Samcheok coastline."
+      "text": "For sunrise, plan to reach a safe coastal viewpoint 30–60 minutes early. The bridge has separate hours and may close in bad weather; check notices before visiting. Consider an indoor stop when conditions are poor."
     }
   },
   "officialManagement": {
@@ -581,30 +577,30 @@
     "subtitle": "From the sea candle rock, due-east sunrise, Chuam Bridge to the Grandmother Rock legend — the visual beauty of Chuam Chotdaebawi Rock.",
     "photoAlt": "Chuam Chotdaebawi Rock (추암 촛대바위)",
     "photoAlts": [
-      "Panorama of Chuam Chotdaebawi, a sea pillar crowned by a lone pine against the open East Sea.",
-      "Quiet empty coast at dawn, calm sea, best for slow sunrise shots.",
-      "New Year sunrise (해맞이) on the due-east sea, red light across the horizon.",
-      "Chotdaebawi in morning front-light, rock and pine detail clearest.",
-      "Chuam Suspension Bridge (출렁다리) across the sea, like a ribbon on the East Sea.",
-      "Overlooking Chotdaebawi and Grandmother Rock together from the bridge deck.",
-      "Grandmother Rock (할머니바위) facing Chotdaebawi across the water, a century-old legend.",
-      "Tidal flat at low tide with shellfish and foraging shorebirds.",
-      "Blue-and-white coastal scenery, echoing Donghae's peninsular port palette.",
-      "Classic composition using the coast as a lead-in to rock and skyline.",
-      "North rock-view wooden walkway, one of Chuam's most recognizable photo spots.",
-      "Warm family wading scene; gentle sand suits family water play.",
-      "Warm dusk coast, afterglow drawing golden glints on the sea.",
-      "Sunset with the candle rock; dawn to noon is the best window.",
-      "Shore scene with gulls and fishing boats, echoing Donghae's fishing past.",
-      "High viewpoint capturing 'rock – bridge – coast – city' in one frame.",
-      "Summer-night coast lights; Chuam becomes Donghae's romantic coastline at night.",
-      "Warm-toned coast trail, showing the public coast gently embraced by the city.",
-      "Coast in morning mist, the port city's occasional quiet at dawn.",
-      "Couples and independent travelers posing on the bridge.",
-      "Snowy quiet coast, the port city's occasional winter stillness.",
-      "The anthem-backdrop monument, telling the national memory of 'East Sea water'.",
-      "Close-up of the lone pine and candle rock, sturdy branches against the blue sea.",
-      "Dawn back-lit silhouette, the pillar outlined in gold-red on the sea."
+      "Coastal lookout with a stone marker and the sea beyond.",
+      "Sandy beach and bay viewed from above.",
+      "Turquoise bay with rocks, trees and a sandy beach.",
+      "Rocky coastline beneath a blue sky.",
+      "Footbridge beside a rocky, wooded coast.",
+      "Sea rocks viewed from a rocky shore.",
+      "Waves breaking around rocks in the sea.",
+      "Rock formation behind a railing and colorful seats.",
+      "Coastal rocks and blue water beyond a wooden railing.",
+      "Surf breaking around dark sea rocks.",
+      "Wooden viewing platform overlooking breaking waves.",
+      "Waves around pointed sea rocks beneath a wooded shore.",
+      "Coastal walkway overlooking rocks and sunlit water.",
+      "Tall narrow sea rock rising among other rocks.",
+      "Rock formations and trees along blue water.",
+      "Footbridge with railings along the coast.",
+      "Stone steps leading to a traditional pavilion.",
+      "Waves surrounding sea rocks near a wooded coast.",
+      "Stone sign beside a traditional building.",
+      "Traditional pavilion beyond a path and lawn.",
+      "Waves washing between rugged coastal rocks.",
+      "Bridge deck overlooking the sea and coast.",
+      "Information board on a coastal viewing platform.",
+      "Rock formations offshore beside a sandy shore."
     ],
     "viewAll": "View location on Google Maps",
     "showMore": "Show more photos",
@@ -691,12 +687,12 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: June 2026",
+    "lastUpdated": "Last updated: November 2026",
     "sections": [
-      { "heading": "1. Information Collection", "content": "We generally do not actively collect users' personal identity information. Any information you provide via contact forms or email will be kept strictly confidential." },
-      { "heading": "2. Use of Information", "content": "Information we collect is used only to provide, maintain and improve our services and to communicate with you. We will not sell or share your personal information with third parties for marketing purposes." },
-      { "heading": "3. Cookies & Tracking", "content": "We use cookies and similar tracking technologies to record activity on the site and store certain information. You can instruct your browser to refuse all cookies or to alert you when a cookie is sent." },
-      { "heading": "4. Data Security", "content": "Your data security matters to us. We take commercially reasonable measures to protect your personal data, though no internet transmission is 100% secure." }
+      { "heading": "1. Information Collection", "content": "This site has no contact form or account feature. Hosting and embedded services may receive technical request data." },
+      { "heading": "2. Use of Information", "content": "Google Analytics is disabled by default and loads only after your permission, which you can change in Cookie Settings." },
+      { "heading": "3. Cookies & Tracking", "content": "Google Maps, Google Fonts and Open-Meteo may receive requests when their content is used. Their own privacy policies apply." },
+      { "heading": "4. Data Security", "content": "Your browser can clear stored preferences. No internet transmission is guaranteed to be completely secure." }
     ]
   },
   "terms": {
@@ -711,9 +707,9 @@
   },
   "cookieSettings": {
     "title": "Cookie Settings",
-    "description": "Manage your cookie preferences.",
-    "essential": { "title": "Strictly Necessary Cookies", "description": "Required for basic site function.", "badge": "Always active" },
-    "analytics": { "title": "Analytics Cookies", "description": "Help us understand how visitors interact with the site." },
+    "description": "Choose whether to enable Google Analytics. It is off until you save permission. This setting does not control Google Maps, Google Fonts, Open-Meteo, or hosting services.",
+    "essential": { "title": "Strictly Necessary Cookies", "description": "The site stores your theme and analytics choice in your browser where available.", "badge": "Always active" },
+    "analytics": { "title": "Analytics Cookies", "description": "Google Analytics loads only after you allow it. You can change that choice here." },
     "marketing": { "title": "Marketing Cookies", "description": "Used to track visitors across sites." },
     "save": "Save preferences",
     "saved": "Preferences saved!"
@@ -726,7 +722,7 @@
       "items": [
         { "icon": "🅿️", "label": "Parking", "value": "Chuam Beach public lot / Chuam Bridge lot" },
         { "icon": "🚻", "label": "Restrooms", "value": "Coast entrance & park restrooms" },
-        { "icon": "🔌", "label": "Fuel / EV charge", "value": "EV chargers at nearby public lots" },
+        { "icon": "🔌", "label": "Fuel / EV charge", "value": "Check parking and charging availability before travel." },
         { "icon": "♿", "label": "Accessibility", "value": "Gentle sand & trail accessible" }
       ]
     },
@@ -735,10 +731,10 @@
         "id": "infra",
         "title": "Transport & Infrastructure",
         "items": [
-          { "q": "Is there parking, and what does it cost?", "a": "Several public lots surround the coast, such as Chuam Beach public parking and Chuam Bridge parking, within walking distance. Public paid rates vary by season (2024 basis: small car about 1,000 KRW / hour, daily cap about 5,000 KRW); they fill fast on peak weekends — arrive early or prefer transit." },
+          { "q": "Is there parking, and what does it cost?", "a": "Parking conditions and rates may change; check signs on arrival." },
           { "q": "Are wheelchairs or strollers allowed?", "a": "The north section of Chuam Beach and the rock-view walkway are gently sloped with boardwalks and accessible ramps; wheelchairs and strollers can reach the rock area fairly easily, but sand still resists wheels — use boardwalks and hard surfaces." },
           { "q": "Are there restrooms or food on site?", "a": "Public restrooms are at the coast entrance and park; dining and convenience stores cluster in Donghae city — stock up on water and food at the entrance or in the city before entering the coast." },
-          { "q": "Is there a gas station or EV charging nearby?", "a": "EV chargers are at the coast-side public lots and Chuam Bridge parking; conventional gas stations line Donghae city center and main roads, handy for drivers to refuel on the way in." }
+          { "q": "Is there a gas station or EV charging nearby?", "a": "Check the current location and availability with a charging map or provider before travel." }
         ]
       },
       {
@@ -755,7 +751,7 @@
         "items": [
           { "q": "Is there an admission fee?", "a": "Chuam is an open public coast, free long-term, the public area accessible 24 hours, no gate, no ticket or reservation — visit anytime (respect residents' rest, avoid late-night noise)." },
           { "q": "How long does a visit take?", "a": "A relaxed visit is about 1–2 hours (including rock viewing and photo stops); if you add Chuam Bridge, Grandmother Rock and Donghae seafood street, reserve a half day." },
-          { "q": "Can I still go in bad weather?", "a": "Yes — it is an open coast, accessible in any weather. But no entering the sea during typhoons, high surf or thunderstorms; reefs are slippery and visibility low, wear non-slip shoes and watch weather; avoid the rock base and coastal steps in bad weather." }
+          { "q": "Can I still go in bad weather?", "a": "Check the forecast, official alerts and local closures before going. During typhoons, high surf or thunderstorms, stay away from the coast, rocks and seaside steps; consider a safe indoor alternative." }
         ]
       },
       {
@@ -835,10 +831,10 @@
         "location": "출렁다리 trail",
         "background": "Shoot the candle rock + Grandmother Rock + East Sea together from below or the top of the bridge — Chuam's most recognizable spot.",
         "points": [
-          "Side-light at dawn makes the rock structure softest.",
+          "Check bridge opening hours and weather restrictions before visiting.",
           "Mind your feet and rails; don't enter closed zones for a frame."
         ],
-        "badge": { "value": "All day", "label": "Most accessible" }
+        "badge": { "value": "Check hours", "label": "Weather permitting" }
       },
       {
         "id": "sea",

@@ -49,7 +49,7 @@ const otherTopics = Object.keys(topics[lang]).filter((s) => s !== slug);
 ---
 
 <BaseLayout title={t.title} description={t.description} path={slug}>
-  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(faqLd).replace(/</g, '\\u003c')}></script>
 
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="max-w-6xl mx-auto px-4">
@@ -79,6 +79,8 @@ const otherTopics = Object.keys(topics[lang]).filter((s) => s !== slug);
           <p class="text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">{s.body}</p>
         </section>
       ))}
+
+      {slug === "parking-directions" && <p class="mb-8 text-sm"><a class="underline" href="https://access.visitkorea.or.kr/ms/detail.do?cotId=022727b9-4e80-4e5b-a77f-826fe13ca5dc">VisitKorea · Chuam Beach</a></p>}
 
       <section class="mb-10">
         <h2 class="font-display text-xl sm:text-2xl font-semibold mb-4" style="color: var(--text-primary);">{faqTitles[lang]}</h2>

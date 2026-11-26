@@ -26,7 +26,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           heading: '악천후 대체 코스',
-          body: '비·안개·강풍 등 해상 보기가 어려운 날에는 억지로 해변에 머물기보다 추암출렁다리 산책, 동해시내 해산물 거리(오징어 등), 인근 강릉·삼척 해안선 드라이브로 무게를 옮기세요. 일출은 날씨에 좌우되므로 유연한 계획이 핵심입니다.',
+          body: '비·안개·강풍이 심하면 안전한 실내 방문지를 고려하세요. 출렁다리도 기상에 따라 통제될 수 있으므로 방문 전 현장 안내와 날씨를 확인하세요.',
         },
       ],
       faq: [
@@ -53,7 +53,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: '자차 이용과 주차',
-          body: '해안 일대에는 추암해수욕장 공영 주차장과 추암출렁다리 주차장 등 여러 공영 주차장이 있습니다. 요금은 소형차 약 1,000원/시간, 1일 상한 약 5,000원(요금·공간은 계절·시간대별 변동, 현장 표지 확인). 성수기·주말은 이른 오전에도 만차가 잦으니 가급적 이른 시간 또는 대중교통을 이용하세요. 전기차 충전 시설을 갖춘 곳도 있습니다.',
+          body: '한국관광공사는 추암해변 촛대바위길 26 입구에 장애인 주차장을 안내합니다. 촛대바위·출렁다리 권역의 안내 주소 28과 구분하세요. 요금과 빈자리는 현장 표지, 충전소는 출발 전 별도로 확인하세요.',
         },
         {
           heading: '대중교통: 동해역·추암역',
@@ -71,7 +71,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           q: '주차 요금은 얼마인가요?',
-          a: '공영 주차장 기준 소형차 약 1,000원/시간, 1일 상한 약 5,000원입니다. 정확한 요금은 현장 표지를 확인하세요.',
+          a: '요금과 이용 조건은 현장 표지를 확인하세요.',
         },
         {
           q: '가장 가까운 역은?',
@@ -168,7 +168,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           heading: 'Bad-weather alternatives',
-          body: 'On rainy, foggy or windy days when the sea isn’t visible, don’t force the beach — shift to the suspension-bridge walk, Donghae’s seafood street (squid and local food), or a coastal drive toward Gangneung/Samcheok. Sunrise depends on weather, so stay flexible.',
+          body: 'In rain, fog or strong wind, consider a safe indoor stop. The bridge can also close due to weather; check conditions and local notices before visiting.',
         },
       ],
       faq: [
@@ -195,7 +195,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: 'By car & parking',
-          body: 'Several public lots serve the coast: Chuam Beach Public Parking and Chuam Bridge Parking. Rates are about 1,000 KRW/hour for a small car, with a daily cap around 5,000 KRW (varies by season/time — follow on-site signs). Peak weekends fill even in early morning; arrive early or take transit. Some lots have EV charging.',
+          body: 'VisitKorea lists accessible parking at the entrance to Chuam Beach, 26 Chotdaebawi-gil; distinguish it from the rock and bridge area at 28. Check parking signs for rates and availability and confirm charging separately before travel.',
         },
         {
           heading: 'Transit: Donghae Station & Chuam Station',
@@ -213,7 +213,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           q: 'What are the parking fees?',
-          a: 'Public lots: about 1,000 KRW/hour, daily cap around 5,000 KRW for a small car. Confirm the exact rate on-site.',
+          a: 'Check the posted rates and conditions on arrival.',
         },
         {
           q: 'Which station is closest?',
@@ -310,7 +310,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           heading: '惡劣天氣替代路線',
-          body: '雨、霧、強風等不宜看海的日子里，不必硬留海邊，可轉往吊橋散步、東海市區海鮮街（魷魚等），或前往江陵·三陟海岸線兜風。日出受天氣左右，彈性安排是關鍵。',
+          body: '雨、霧或強風時可考慮安全的室內行程。吊橋也可能因天氣關閉，前往前請確認天氣與現場公告。',
         },
       ],
       faq: [
@@ -337,7 +337,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: '自駕與停車',
-          body: '海岸一帶有楚岩海水浴場公共停車場、楚岩吊橋停車場等多處公共停車場。小型車約 1,000 韓元/小時、單日上限約 5,000 韓元（依季節·時段變動，請依現場標示）。旺季週末即便清晨也常客滿，請盡早或改搭大眾運輸。部分停車場設有電動車充電設施。',
+          body: '韓國觀光公社記載楚岩海邊燭台岩路 26 號入口設有無障礙停車位，請與岩石及吊橋區域的 28 號區分。費率和空位請看現場告示，充電地點請另行確認。',
         },
         {
           heading: '大眾運輸：東海站·楚岩站',
@@ -355,7 +355,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           q: '停車費多少？',
-          a: '公共停車場小型車約 1,000 韓元/小時、單日上限約 5,000 韓元，確切費用以現場標示為準。',
+          a: '請以現場告示確認費率及使用條件。',
         },
         {
           q: '最近車站是？',
@@ -452,7 +452,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           heading: '悪天候時の代替コース',
-          body: '雨・霧・強風など海が見えにくい日は、無理に海辺に留まらず、吊橋散策、東海の海鮮街（イカなど）、近隣の江陵・三陟海岸ドライブへ重心を移しましょう。日の出は天候次第なので柔軟な計画が鍵です。',
+          body: '雨・霧・強風の際は安全な屋内の立ち寄り先を検討してください。吊橋も天候により閉鎖される場合があるため、訪問前に天気と現地案内を確認してください。',
         },
       ],
       faq: [
@@ -479,7 +479,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: '車・駐車',
-          body: '海岸一帯に楚岩海水浴場公共駐車場や楚岩吊橋駐車場など複数の公共駐車場があります。料金は小型車約1,000ウォン/時、1日上限約5,000ウォン（季節・時間帯で変動、現場標示を確認）。週末ピークは早朝でも満車必至—早めか公共交通を。EV充電設備のある駐車場も。',
+          body: '韓国観光公社は楚岩海辺の촛대바위길 26入口に障害者用駐車場を案内しています。岩・吊橋周辺の28番地と区別してください。料金・空きは現地掲示、充電場所は出発前に別途確認してください。',
         },
         {
           heading: '公共交通：東海駅・楚岩駅',
@@ -497,7 +497,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
         {
           q: '駐車料金は？',
-          a: '公共駐車場は小型車約1,000ウォン/時、1日上限約5,000ウォン。正確な料金は現場標示で。',
+          a: '料金と利用条件は現地の掲示をご確認ください。',
         },
         {
           q: 'いちばん近い駅は？',

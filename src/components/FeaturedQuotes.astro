@@ -1,60 +1,16 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages } = getI18n(Astro.url);
-const reviews = messages.reviews;
-const featured = reviews.featured ?? [];
-const bg = '/gallery/chotdaebawi-1.jpg';
+const { lang } = getI18n(Astro.url);
+const text = {
+  en: ['CHUAM COAST', 'A sea stack, a coastal walk, and views of the East Sea.'],
+  ko: ['추암 해안', '바다 위 촛대바위와 해안 산책길에서 동해를 바라보세요.'],
+  ja: ['楚岩海岸', '海上の燭台岩と海岸の散策路から東海を眺めましょう。'],
+  zh: ['楚岩海岸', '沿海岸步道欣賞海上燭台岩與東海景色。'],
+}[lang] ?? ['CHUAM COAST', 'A sea stack, a coastal walk, and views of the East Sea.'];
 ---
-
-{featured.length > 0 && (
-  <section class="section-padding relative overflow-hidden" style="background: linear-gradient(rgba(15,32,21,0.74), rgba(15,32,21,0.74)), url('{bg}'); background-size: cover; background-position: center; background-attachment: fixed;">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-xs uppercase tracking-[0.24em] mb-8 text-white/70">{reviews.featuredTitle}</p>
-
-      <div class="relative min-h-[10rem]">
-        {featured.map((item, i) => (
-          <blockquote
-            class="quote-slide absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-700"
-            style={`opacity: ${i === 0 ? '1' : '0'}; pointer-events: ${i === 0 ? 'auto' : 'none'};`}
-            data-quote-index={i}
-          >
-            <p class="font-display text-2xl sm:text-3xl font-medium leading-relaxed text-white max-w-3xl">“{item.text}”</p>
-            <footer class="mt-6 text-sm text-white/75">{item.source}</footer>
-          </blockquote>
-        ))}
-      </div>
-
-      <div class="mt-8 flex items-center justify-center gap-2" data-quote-dots>
-        {featured.map((_, i) => (
-          <button type="button" class="w-2.5 h-2.5 rounded-full transition" data-quote-dot={i} aria-label={`Quote ${i + 1}`} style={`background: ${i === 0 ? '#fff' : 'rgba(255,255,255,0.4)'};`}></button>
-        ))}
-      </div>
-    </div>
-  </section>
-)}
-
-<script is:inline>
-  (function () {
-    var slides = Array.from(document.querySelectorAll('[data-quote-index]'));
-    var dots = Array.from(document.querySelectorAll('[data-quote-dot]'));
-    if (slides.length <= 1) return;
-    var current = 0;
-    var timer;
-    function show(next) {
-      slides[current].style.opacity = '0';
-      slides[current].style.pointerEvents = 'none';
-      dots[current].style.background = 'rgba(255,255,255,0.4)';
-      current = next;
-      slides[current].style.opacity = '1';
-      slides[current].style.pointerEvents = 'auto';
-      dots[current].style.background = '#fff';
-    }
-    function next() { show((current + 1) % slides.length); }
-    function start() { timer = setInterval(next, 5000); }
-    function stop() { clearInterval(timer); }
-    dots.forEach(function (d, i) {
-      d.addEventListener('click', function () { stop(); show(i); start(); });
-    });
-    start();
-  })();
-</script>
+<section class="section-padding relative overflow-hidden" style="background: linear-gradient(rgba(15,32,21,0.74), rgba(15,32,21,0.74)), url('/gallery/chotdaebawi-1.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <p class="text-xs uppercase tracking-[0.24em] mb-8 text-white/70">{text[0]}</p>
+    <p class="font-display text-2xl sm:text-3xl font-medium leading-relaxed text-white max-w-3xl mx-auto">{text[1]}</p>
+  </div>
+</section>

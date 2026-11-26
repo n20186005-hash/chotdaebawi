@@ -46,7 +46,7 @@ const faqLd = (() => {
 ---
 
 <BaseLayout title={messages.meta.title} description={messages.meta.description} path="">
-  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(faqLd).replace(/</g, '\\u003c')}></script>
   <Breadcrumbs />
   <SectionNav />
   <Hero />

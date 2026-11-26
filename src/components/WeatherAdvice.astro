@@ -80,7 +80,7 @@ const tide = w.tide ?? {};
   </div>
 </section>
 
-<script type="application/json" id="weather-i18n" is:inline set:html={JSON.stringify(w)}></script>
+<script type="application/json" id="weather-i18n" is:inline set:html={JSON.stringify(w).replace(/</g, '\\u003c')}></script>
 
 <script is:inline>
   (function () {
