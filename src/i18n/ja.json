@@ -964,7 +964,7 @@
   },
   "cookieSettings": {
     "title": "Cookie 設定",
-    "description": "Google Analytics の利用を選択できます。許可を保存するまではオフです。この設定は Google Maps、Google Fonts、Open-Meteo、ホスティングサービスを制御しません。",
+    "description": "Google Analytics の利用を選択できます。許可を保存するまではオフです。この設定は Google Maps、Google Fonts、Open-Meteo、ホスティングサービスを制御しません。 Cloudflare はパフォーマンス分析ビーコンを挿入する場合があり、この Google Analytics の設定では制御できません。",
     "essential": {
       "title": "必須 Cookie",
       "description": "可能な場合、テーマと分析の選択をブラウザーに保存します。",

@@ -707,7 +707,7 @@
   },
   "cookieSettings": {
     "title": "Cookie Settings",
-    "description": "Choose whether to enable Google Analytics. It is off until you save permission. This setting does not control Google Maps, Google Fonts, Open-Meteo, or hosting services.",
+    "description": "Choose whether to enable Google Analytics. It is off until you save permission. This setting does not control Google Maps, Google Fonts, Open-Meteo, or hosting services. Cloudflare may insert a performance analytics beacon; this Google Analytics switch does not control it.",
     "essential": { "title": "Strictly Necessary Cookies", "description": "The site stores your theme and analytics choice in your browser where available.", "badge": "Always active" },
     "analytics": { "title": "Analytics Cookies", "description": "Google Analytics loads only after you allow it. You can change that choice here." },
     "marketing": { "title": "Marketing Cookies", "description": "Used to track visitors across sites." },

@@ -974,7 +974,7 @@
   },
   "cookieSettings": {
     "title": "Cookie 設置",
-    "description": "選擇是否啟用 Google Analytics；保存允許前預設關閉。此設定不控制 Google Maps、Google Fonts、Open-Meteo 或主機服務。",
+    "description": "選擇是否啟用 Google Analytics；保存允許前預設關閉。此設定不控制 Google Maps、Google Fonts、Open-Meteo 或主機服務。 Cloudflare 可能插入效能分析信標，這個 Google Analytics 開關無法控制它。",
     "essential": {
       "title": "嚴格必要的 Cookie",
       "description": "可用時，網站會在瀏覽器中保存主題與分析選擇。",
