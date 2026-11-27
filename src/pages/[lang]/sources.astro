@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getI18n, languagesList } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return languagesList.map((lang) => ({ params: { lang } }));
+}
+const { lang } = getI18n(Astro.url);
+const copy: Record<string, { title: string; description: string; intro: string; details: string[]; linkTitle: string; back: string }> = {
+  ko: {
+    title: '추암 촛대바위 관광 정보 출처', description: '추암 촛대바위와 추암해변, 출렁다리의 공식 관광 정보와 이용시간을 확인할 수 있는 출처 안내.',
+    intro: '시설마다 운영시간과 주소가 다를 수 있어, 방문 계획에 사용하는 원문 자료를 구분해 안내합니다.',
+    details: [
+      '촛대바위 관광 명소: 한국관광공사의 영문 안내에는 연중·24시간 개방과 무료 입장이 기재되어 있습니다.',
+      '추암해변: 한국관광공사 자료에 해변 상시 개방, 해안산책로(출렁다리) 09:00–20:00로 기재되어 있습니다. 악천후·현장 통제 시 이용 조건이 달라집니다.',
+      '주소 구분: 촛대바위 자체는 추암동 산69, 해변은 촛대바위길 26, 출렁다리 방문 안내는 촛대바위길 28로 각각 표기됩니다.',
+      '이 페이지는 공식 운영기관을 대신하지 않습니다. 실시간 통제·요금 변경은 게시 기관 및 현장 안내가 기준입니다.',
+    ], linkTitle: '참조한 공개 자료', back: '관광 메인 가이드',
+  },
+  en: {
+    title: 'Sources for visiting Chuam Chotdaebawi', description: 'Official tourism references for Chuam Chotdaebawi Rock, Chuam Beach and the ocean suspension bridge.',
+    intro: 'Visitor information is presented by facility so that hours and addresses for the rock, beach and bridge are not confused.',
+    details: [
+      'Rock: VISITKOREA’s English attraction listing describes year-round access, 24-hour opening and free admission.',
+      'Chuam Beach: the tourism listing describes the beach as open around the clock, while the ocean walking trail and bridge have published hours of 09:00–20:00, subject to closures.',
+      'Addresses: the rock is also listed at Chuam-dong san 69, the beach at 26 Chotdaebawi-gil and the bridge visitor entrance at no. 28.',
+      'This independent guide does not operate the attraction. Facility notices and operating bodies are authoritative for changes and temporary closures.',
+    ], linkTitle: 'Public reference links', back: 'Main visitor guide',
+  },
+  zh: {
+    title: '湫岩燭臺岩旅遊資料來源', description: '湫岩燭臺岩、海灘及海上吊橋的韓國觀光官方資訊與開放時間來源。',
+    intro: '為免混淆岩石、海灘與吊橋的不同地址和使用時間，本頁按設施整理可查證的公開資料。',
+    details: [
+      '燭臺岩：韓國觀光公社的英語景點資料列有全年、24小時開放及免費參觀。',
+      '湫岩海灘：公開資料列海灘全年開放，海岸步道／吊橋公布時間為09:00–20:00；遇惡劣天氣可能關閉。',
+      '地址區分：岩石另列為湫岩洞山69；海灘使用燭臺岩路26號，吊橋訪客入口使用28號。',
+      '本指南為獨立旅遊資訊網站；現場臨時管制、費用與營運變更請以管理機構公告為準。',
+    ], linkTitle: '官方及公開參考連結', back: '返回景點首頁',
+  },
+  ja: {
+    title: '楚岩燭台岩の観光情報・出典', description: '楚岩燭台岩、ビーチ、海上吊橋の公式観光情報と営業時間を確認する参考資料。',
+    intro: '岩・ビーチ・吊橋で住所や利用時間が異なるため、施設別に一次資料をまとめました。',
+    details: [
+      '岩：韓国観光公社の英語案内には通年・24時間・無料と記されています。',
+      'ビーチ：通年開放、海岸遊歩道・吊橋は09:00–20:00と掲載されています。悪天候時の通行止めにご注意ください。',
+      '住所：岩自体は楚岩洞山69、ビーチは촛대바위길 26、吊橋の案内住所は28番です。',
+      '当サイトは独立した旅行案内です。臨時休止や料金変更などは運営者の告知・現地掲示が優先されます。',
+    ], linkTitle: '公開参考資料', back: '観光ガイドへ戻る',
+  },
+};
+const c = copy[lang] ?? copy.ko;
+const sources = [
+  { name: 'VISITKOREA · Chuam Chotdaebawi Rock', url: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=94231' },
+  { name: 'VISITKOREA · Chuam Beach', url: 'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=102576' },
+  { name: 'VISITKOREA · Accessible Chuam Beach', url: 'https://access.visitkorea.or.kr/ms/detail.do?cotId=022727b9-4e80-4e5b-a77f-826fe13ca5dc' },
+  { name: 'Donghae City Tourism', url: 'https://www.dh.go.kr/tour' },
+  { name: 'Chuam Chotdaebawi Rock · Google Maps', url: 'https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9' },
+];
+---
+<BaseLayout title={c.title} description={c.description} path="sources">
+  <article class="section-padding" style="background: var(--bg-primary);">
+    <div class="max-w-4xl mx-auto px-4">
+      <a href={'/' + lang + '/'} class="text-sm underline" style="color: var(--accent);">← {c.back}</a>
+      <h1 class="font-display text-3xl sm:text-4xl font-bold mt-6 mb-4" style="color: var(--text-primary);">{c.title}</h1>
+      <p class="text-base leading-relaxed mb-8" style="color: var(--text-secondary);">{c.intro}</p>
+      <div class="grid gap-4 mb-10">
+        {c.details.map((detail) => (
+          <p class="rounded-2xl border p-5 leading-relaxed" style="background: var(--card-bg); border-color: var(--border-color); color: var(--text-secondary);">{detail}</p>
+        ))}
+      </div>
+      <h2 class="font-display text-xl font-semibold mb-4" style="color: var(--text-primary);">{c.linkTitle}</h2>
+      <ul class="grid sm:grid-cols-2 gap-3">
+        {sources.map((source) => (
+          <li><a class="block rounded-xl border p-4 hover:opacity-80" href={source.url} target="_blank" rel="noopener noreferrer" style="background: var(--card-bg); border-color: var(--border-color); color: var(--accent);">{source.name} ↗</a></li>
+        ))}
+      </ul>
+    </div>
+  </article>
+</BaseLayout>

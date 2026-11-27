@@ -25,6 +25,14 @@ const heroWeather = {
       {h.subtitle}
     </p>
 
+    {h.rating && (
+      <a href={h.mapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6 text-sm font-semibold text-white border border-white/30 hover:bg-white/10" style="background: rgba(15,32,21,0.4);">
+        <span aria-hidden="true">★</span>
+        <span>{h.rating}</span>
+        <span class="font-normal text-white/80">{({ ko: 'Google 지도 · 2026-10 제공 자료', en: 'Google Maps · Oct 2026 supplied snapshot', zh: 'Google 地圖 · 2026年10月提供的資料', ja: 'Googleマップ · 2026年10月提供の情報' } as Record<string,string>)[getI18n(Astro.url).lang]}</span>
+      </a>
+    )}
+
     <!-- Key facts as icon cards -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto mb-6">
       {facts.map((f) => (

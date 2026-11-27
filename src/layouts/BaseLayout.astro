@@ -20,7 +20,7 @@ const canonical = alts[lang] ?? alts.zh;
 const { messages } = getI18n(Astro.url);
 const ogImage = `${siteConfig.baseUrl}/gallery/chotdaebawi-1.jpg`;
 
-const jsonLd = {
+const jsonLd = path === '' ? {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
   '@id': `${siteConfig.baseUrl}/#chotdaebawi`,
@@ -55,20 +55,24 @@ const jsonLd = {
   ],
   sameAs: ['https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9'],
   hasMap: 'https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9',
+} : {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': canonical + '#webpage',
+  name: title,
+  description,
+  url: canonical,
+  inLanguage: htmlLang,
+  isPartOf: siteConfig.baseUrl + '/' + lang + '/',
 };
-  const breadcrumbLd = (() => {
-    const bc = messages.breadcrumb;
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: bc.home, item: `${siteConfig.baseUrl}/${lang}/` },
-        { '@type': 'ListItem', position: 2, name: bc.region, item: `${siteConfig.baseUrl}/${lang}/#overview` },
-        { '@type': 'ListItem', position: 3, name: bc.city, item: `${siteConfig.baseUrl}/${lang}/#transport` },
-        { '@type': 'ListItem', position: 4, name: bc.current, item: canonical },
-      ],
-    };
-  })();
+  const breadcrumbLd = path ? {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: messages.breadcrumb.home, item: siteConfig.baseUrl + '/' + lang + '/' },
+      { '@type': 'ListItem', position: 2, name: title, item: canonical },
+    ],
+  } : null;
 ---
 
 <!doctype html>
@@ -102,7 +106,7 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImage} />
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')}></script>
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c')}></script>
+    {breadcrumbLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c')}></script>}
 
     <script is:inline>
       (function () {
