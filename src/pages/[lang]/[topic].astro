@@ -45,6 +45,22 @@ const faqLd = {
   })),
 };
 
+const mapsQuery: Record<string, string> = {
+  sunrise: '추암 촛대바위 동해시',
+  'parking-directions': '추암해변 공영주차장 동해시',
+  'chuam-beach': '추암해수욕장 동해시',
+  'chuam-suspension-bridge': '추암 출렁다리 동해시',
+  'nearby-itinerary': '북평해암정 동해시',
+};
+const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(mapsQuery[slug] ?? '추암 촛대바위 동해시');
+const utilityLabels: Record<string, { map: string; sources: string; train: string }> = {
+  ko: { map: '이 장소 Google 지도에서 찾기', sources: '공식 관광정보 출처', train: '추암역을 이용하려면 해당 날짜의 정차 여부와 열차 시각을 먼저 확인하세요. 동해역에서 버스·택시로 환승하는 방법도 있습니다.' },
+  en: { map: 'Find this location on Google Maps', sources: 'Official visitor sources', train: 'Check whether a train actually stops at Chuam Station on your travel date. Bus or taxi transfers from Donghae Station are another option.' },
+  zh: { map: '在 Google 地圖搜尋此地點', sources: '官方旅遊資訊來源', train: '如打算在湫岩站下車，請先確認出發當日是否有列車停靠及班次；亦可從東海站轉乘巴士或計程車。' },
+  ja: { map: 'Googleマップでこの場所を検索', sources: '公式観光情報の出典', train: '楚岩駅を利用する場合、旅行日に列車が停車するか時刻表を確認してください。東海駅からバス・タクシーの乗り継ぎも可能です。' },
+};
+const utilities = utilityLabels[lang] ?? utilityLabels.ko;
+
 const otherTopics = Object.keys(topics[lang]).filter((s) => s !== slug);
 ---
 
@@ -71,6 +87,18 @@ const otherTopics = Object.keys(topics[lang]).filter((s) => s !== slug);
       <header class="mb-10">
         <h1 class="font-display text-3xl sm:text-4xl font-bold mb-4" style="color: var(--text-primary);">{t.title}</h1>
         <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{t.intro}</p>
+        {(slug === 'sunrise' || slug === 'nearby-itinerary') && (
+          <figure class="mt-6 overflow-hidden rounded-2xl">
+            <img src="/gallery/chotdaebawi-1.jpg" alt="Chuam Chotdaebawi Rock, Donghae coast" class="w-full h-52 sm:h-72 object-cover" width="1200" height="675" loading="lazy" decoding="async" />
+          </figure>
+        )}
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-6 text-sm">
+          <a href={mapUrl} target="_blank" rel="noopener noreferrer" class="font-semibold underline" style="color: var(--accent);">{utilities.map}</a>
+          <a href={'/' + lang + '/sources/'} class="font-semibold underline" style="color: var(--accent);">{utilities.sources}</a>
+        </div>
+        {slug === 'parking-directions' && (
+          <p class="mt-5 rounded-xl border p-4 text-sm leading-relaxed" style="background: var(--bg-tertiary); color: var(--text-secondary); border-color: var(--border-color);">{utilities.train}</p>
+        )}
       </header>
 
       {t.sections.map((s) => (
