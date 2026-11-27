@@ -18,7 +18,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: '내일 일출 시간 확인과 추천 도착 시각',
-          body: '동해시 추암의 일출 시간은 계절에 따라 크게 달라집니다. 동짓무렵(12월 말)은 약 07:30, 하지 무렵(6월 말)은 약 05:10 전후입니다. 정확한 내일 일출 시각은 기상청 또는 Open-Meteo 등에서 위도·경도(약 37.55°N, 129.12°E) 기준으로 확인하세요. 붉은 빛이 뜨기 직전의 부드러운 새벽빛을 함께 담으려면 일출 약 40분 전, 즉 새벽 4~7시 무렵 해안 도착을 권장합니다.',
+          body: '동해시 추암의 일출 시간은 계절에 따라 크게 달라집니다. 동짓무렵(12월 말)은 약 07:30, 하지 무렵(6월 말)은 약 05:10 전후입니다. 정확한 내일 일출 시각은 기상청 또는 Open-Meteo 등에서 위도·경도(약 37.479°N, 129.160°E) 기준으로 확인하세요. 붉은 빛이 뜨기 직전의 부드러운 새벽빛을 함께 담으려면 일출 약 40분 전, 즉 새벽 4~7시 무렵 해안 도착을 권장합니다.',
         },
         {
           heading: '추천 조망 포인트',
@@ -149,6 +149,43 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
       ],
     },
+    'nearby-itinerary': {
+      "title": "추암 촛대바위 주변 명소 · 반나절 도보 코스",
+      "description": "추암 촛대바위에서 북평해암정, 추암출렁다리, 추암조각공원과 추암해변을 잇는 반나절 여행 동선과 방문 팁.",
+      "intro": "여러 지역을 무리하게 하루에 묶기보다, 촛대바위 주변에서 실제로 연결되는 바다·역사·산책 공간을 차례로 둘러보는 반나절 코스입니다. 각 장소는 서로 다른 명소이며 현장 표지에 따라 이동합니다.",
+      "sections": [
+        {
+          "heading": "1. 촛대바위 해안 전망 지점",
+          "body": "먼저 해변 북쪽의 안전한 전망 지점에서 촛대바위와 주변 기암을 감상합니다. 일출 촬영이 목적이면 당일 동해시 일출 시각을 확인하고 여유 있게 도착하세요. 바위 자체에 접근하거나 젖은 암초로 내려가지 마세요."
+        },
+        {
+          "heading": "2. 북평해암정: 바다 옆 역사 정자",
+          "body": "전망 지점에서 이어지는 동선을 따라 북평해암정(海巖亭)을 둘러봅니다. 한국관광공사 관광 자료에는 1361년 건립, 1790년경 중수한 정자로 소개되어 있습니다. 정자는 촛대바위의 별명이 아닌 별도의 역사 유산입니다."
+        },
+        {
+          "heading": "3. 해상 출렁다리와 추암조각공원",
+          "body": "이어서 추암출렁다리에서 동해 바다와 해안 지형을 다른 각도로 봅니다. 다리는 2019년 6월 조성된 약 72m 보행 교량이며 한국관광공사에 기재된 일반 안내 시간은 09:00~20:00입니다. 출렁다리 끝 구간에서 추암조각공원으로 이동할 수 있으나 강풍·악천후 시 통제에 따르세요."
+        },
+        {
+          "heading": "4. 추암해변에서 마무리",
+          "body": "마지막은 추암해변의 모래사장과 해안 풍경입니다. 여름 수영 구역 운영과 무관하게 산책에 적합한 해변이며, 공공 해안은 상시 개방으로 안내됩니다. 여행 마무리 때는 귀가 교통편과 주차 위치를 재확인하세요."
+        }
+      ],
+      "faq": [
+        {
+          "q": "도보로 묶기 좋은 명소는?",
+          "a": "촛대바위 전망 지점, 북평해암정, 출렁다리, 추암조각공원, 추암해변이 같은 해안권에 있어 현장 연결 산책로를 따라 둘러볼 수 있습니다."
+        },
+        {
+          "q": "출렁다리를 일출 직후에도 걸을 수 있나요?",
+          "a": "일반 안내 시간은 09:00~20:00로 게시되어 있으므로 이른 일출 시간에는 다리가 열려 있다고 가정하지 마세요."
+        },
+        {
+          "q": "해암정과 할머니바위가 같은 곳인가요?",
+          "a": "아닙니다. 북평해암정은 역사 정자이고, 할머니바위는 주변 바위와 관련된 지명·전설입니다."
+        }
+      ]
+    },
   },
   en: {
     sunrise: {
@@ -160,7 +197,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: 'Checking tomorrow’s sunrise & when to arrive',
-          body: 'Sunrise at Chuam varies a lot by season — around 07:30 near the winter solstice (late December) and about 05:10 near the summer solstice (late June). Check the exact time for tomorrow using a weather service with the local coordinates (about 37.55°N, 129.12°E). To catch the soft pre-dawn glow before the reddest light, aim to be on the coast about 40 minutes before sunrise — roughly between 04:00 and 07:00.',
+          body: 'Sunrise at Chuam varies a lot by season — around 07:30 near the winter solstice (late December) and about 05:10 near the summer solstice (late June). Check the exact time for tomorrow using a weather service with the local coordinates (about 37.479°N, 129.160°E). To catch the soft pre-dawn glow before the reddest light, aim to be on the coast about 40 minutes before sunrise — roughly between 04:00 and 07:00.',
         },
         {
           heading: 'Recommended viewpoints',
@@ -291,6 +328,43 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
       ],
     },
+    'nearby-itinerary': {
+      "title": "Chuam Chotdaebawi: Nearby Sights & Half-Day Walk",
+      "description": "A practical half-day coastal route linking Chotdaebawi Rock, Bukpyeong Haeamjeong Pavilion, Chuam Suspension Bridge, the sculpture park and Chuam Beach.",
+      "intro": "This half-day walk keeps to the connected Chuam coast rather than treating distant towns as nearby stops. It links distinct sea viewpoints, a historic pavilion, a bridge and the beach.",
+      "sections": [
+        {
+          "heading": "1. Start at the rock viewpoint",
+          "body": "Begin at the safe viewing area near the north end of Chuam Beach. For sunrise photography, check the date-specific sunrise time in Donghae and arrive ahead of first light. Stay away from wet rocks, cliff edges and restricted coastal sections."
+        },
+        {
+          "heading": "2. Visit historic Bukpyeong Haeamjeong",
+          "body": "Continue towards Bukpyeong Haeamjeong Pavilion beside the coast. VISITKOREA describes a pavilion first established in 1361 and rebuilt around 1790. It is a separate historic pavilion, not another name for the rock or a character in the rock's legend."
+        },
+        {
+          "heading": "3. Walk the suspension bridge and sculpture park",
+          "body": "Chuam Suspension Bridge is an approximately 72-metre ocean walkway installed in June 2019. The Korean tourism listing gives regular ocean-trail hours as 09:00–20:00, so do not assume access during dawn. The route connects towards Chuam Sculpture Park; temporary closures can apply in strong winds or high surf."
+        },
+        {
+          "heading": "4. Finish by Chuam Beach",
+          "body": "Return to the sand and sheltered areas of Chuam Beach for a relaxed coastal stroll. The public beach is described as open year-round, while swimming services operate seasonally. Before leaving, check your transport departure and the location of your parking area."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which nearby sights fit together on foot?",
+          "a": "The rock viewpoint, Haeamjeong Pavilion, Chuam Suspension Bridge, Chuam Sculpture Park and Chuam Beach share the local coastal area and can form a connected visit."
+        },
+        {
+          "q": "Can I use the bridge at sunrise?",
+          "a": "The usual ocean-trail hours are published as 09:00–20:00; early-morning access is not guaranteed and weather closures are possible."
+        },
+        {
+          "q": "Is Haeamjeong Pavilion the same as Grandmother Rock?",
+          "a": "No. Haeamjeong is a historic pavilion. Grandmother Rock is a separate nearby rock name associated with local legends."
+        }
+      ]
+    },
   },
   zh: {
     sunrise: {
@@ -302,7 +376,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: '查詢明日日出與建議抵達',
-          body: '楚岩日出隨季節差異很大：冬至前後（12月底）約 07:30，夏至前後（6月底）約 05:10。請以當地座標（約 37.55°N, 129.12°E）經氣象服務查詢明日確切時間。想在一天中最紅的光芒升起前捕捉柔和晨曦，建議比日出提前約 40 分鐘、約清晨 4~7 點抵達海岸。',
+          body: '楚岩日出隨季節差異很大：冬至前後（12月底）約 07:30，夏至前後（6月底）約 05:10。請以當地座標（約 37.479°N, 129.160°E）經氣象服務查詢明日確切時間。想在一天中最紅的光芒升起前捕捉柔和晨曦，建議比日出提前約 40 分鐘、約清晨 4~7 點抵達海岸。',
         },
         {
           heading: '推薦觀景點',
@@ -433,6 +507,43 @@ export const topics: Record<string, Record<string, TopicContent>> = {
         },
       ],
     },
+    'nearby-itinerary': {
+      "title": "湫岩燭臺岩周邊景點與半日海岸步行路線",
+      "description": "串聯燭臺岩、北坪海岩亭、湫岩吊橋、雕塑公園及湫岩海灘的半日觀光路線與交通提醒。",
+      "intro": "這條半日路線集中在湫岩海岸相互連通的景點，不把遠方城市的景點混充為步行可達。可依天候和實際開放情況調整順序。",
+      "sections": [
+        {
+          "heading": "1. 從燭臺岩觀景處開始",
+          "body": "在湫岩海灘北側安全觀景區欣賞海上岩柱與周圍奇岩。若要拍攝日出，先查詢東海市當天日出時刻並提早抵達；切勿走上濕滑礁石或越過管制線。"
+        },
+        {
+          "heading": "2. 北坪海岩亭的歷史",
+          "body": "沿海岸遊步道前往北坪海岩亭（북평해암정）。韓國觀光公社資料記載該亭建於1361年、約在1790年重修。海岩亭是一座獨立的歷史亭閣，並非燭臺岩或傳說中人物的別名。"
+        },
+        {
+          "heading": "3. 吊橋與雕塑公園",
+          "body": "湫岩海上吊橋長約72公尺，於2019年6月設置。韓國觀光公社公布海岸步道／吊橋的一般時間為09:00–20:00，日出時不應預設能上橋。沿線可接續湫岩雕塑公園，遇強風或巨浪須遵守封閉公告。"
+        },
+        {
+          "heading": "4. 在湫岩海灘結束行程",
+          "body": "沿沙灘與公共海岸慢慢散步，再回到停車或交通接駁點。海灘全年開放，但夏季戲水服務、救生設施和其他附屬設備有自己的運作季節。"
+        }
+      ],
+      "faq": [
+        {
+          "q": "哪些周邊景點適合一起步行遊覽？",
+          "a": "燭臺岩觀景處、北坪海岩亭、湫岩吊橋、湫岩雕塑公園和海灘位於同一海岸遊覽區，可依現場步道連續參觀。"
+        },
+        {
+          "q": "日出後就能走吊橋嗎？",
+          "a": "一般公布時間為09:00–20:00，不能假定清晨日出時一定開放；天候不佳也可能暫停通行。"
+        },
+        {
+          "q": "海岩亭和奶奶岩是同一個景點嗎？",
+          "a": "不是。海岩亭是歷史亭閣，奶奶岩是附近與地方傳說相關的岩石名稱。"
+        }
+      ]
+    },
   },
   ja: {
     sunrise: {
@@ -444,7 +555,7 @@ export const topics: Record<string, Record<string, TopicContent>> = {
       sections: [
         {
           heading: '明日の日の出確認とおすすめ到着',
-          body: '楚岩の日の出は季節で大きく変わり、冬至付近（12月末）は約07:30、夏至付近（6月末）は約05:10前後です。正確な明日の時刻は、気象サービスで当地の緯度・経度（約37.55°N, 129.12°E）を基準に確認してください。いちばん赤い光が昇る直前のやわらかな朝焼けを捉えるには、日の出の約40分前、明け方4〜7時ごろの海岸到着をおすすめします。',
+          body: '楚岩の日の出は季節で大きく変わり、冬至付近（12月末）は約07:30、夏至付近（6月末）は約05:10前後です。正確な明日の時刻は、気象サービスで当地の緯度・経度（約37.479°N, 129.160°E）を基準に確認してください。いちばん赤い光が昇る直前のやわらかな朝焼けを捉えるには、日の出の約40分前、明け方4〜7時ごろの海岸到着をおすすめします。',
         },
         {
           heading: 'おすすめ展望ポイント',
@@ -574,6 +685,43 @@ export const topics: Record<string, Record<string, TopicContent>> = {
           a: '公共橋梁ですが悪天候（強風・豪雨）で閉鎖される場合があり、現場案内と天気予報を確認を。',
         },
       ],
+    },
+    'nearby-itinerary': {
+      "title": "楚岩燭台岩周辺の見どころ・半日散策ルート",
+      "description": "燭台岩、北坪海岩亭、楚岩吊橋、彫刻公園、楚岩ビーチをつなぐ半日海岸コースと訪問のポイント。",
+      "intro": "この半日コースは楚岩の海岸に集中し、遠くの市街地を「徒歩圏」として混ぜない実用的な周遊案です。天候や施設の開放状況に応じて順序を変えてください。",
+      "sections": [
+        {
+          "heading": "1. 燭台岩の展望地点から出発",
+          "body": "楚岩ビーチ北側の安全な展望場所から岩柱と周囲の奇岩を眺めます。日の出を狙う場合は東海市の当日の日の出時刻を確認し、余裕をもって到着を。濡れた岩場や立入禁止区域には近づかないでください。"
+        },
+        {
+          "heading": "2. 北坪海岩亭の歴史を知る",
+          "body": "海岸遊歩道をたどり北坪海岩亭（북평해암정）へ。韓国観光公社の案内では1361年創建、1790年頃改修の歴史的な亭閣です。燭台岩や伝説に登場する岩の別名ではありません。"
+        },
+        {
+          "heading": "3. 海上吊橋と彫刻公園",
+          "body": "2019年6月設置の楚岩吊橋は全長約72m。韓国観光公社掲載の海岸遊歩道・吊橋の通常利用時間は09:00–20:00で、日の出時から入れるとは限りません。周辺の楚岩彫刻公園へつながりますが、強風・高波時には通行規制に従ってください。"
+        },
+        {
+          "heading": "4. 楚岩ビーチで締めくくる",
+          "body": "砂浜と公共海岸でゆっくり過ごし、駐車場所や帰りの交通を確認します。海岸は通年開放と案内されていますが、遊泳サービスと関連設備には別途運営期間があります。"
+        }
+      ],
+      "faq": [
+        {
+          "q": "徒歩で組み合わせやすい周辺スポットは？",
+          "a": "燭台岩の展望場所、北坪海岩亭、楚岩吊橋、楚岩彫刻公園、楚岩ビーチは同じ海岸エリアにあり、現地の遊歩道に沿って巡れます。"
+        },
+        {
+          "q": "日の出直後に吊橋を渡れますか？",
+          "a": "通常の掲載時間は09:00–20:00です。早朝の入場を前提にせず、天候による閉鎖にも注意してください。"
+        },
+        {
+          "q": "海岩亭はおばあさん岩と同じですか？",
+          "a": "違います。海岩亭は歴史的な亭閣で、おばあさん岩は付近の岩や伝説に結びつく別の名称です。"
+        }
+      ]
     },
   },
 };
