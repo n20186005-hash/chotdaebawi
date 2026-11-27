@@ -1,0 +1,65 @@
+---
+import { getI18n } from '../i18n/ui';
+const { lang } = getI18n(Astro.url);
+const copy: Record<string, { title: string; intro: string; cards: { title: string; value: string; detail: string }[]; sources: string; guides: string }> = {
+  ko: {
+    title: '방문 전 꼭 알아둘 3가지', intro: '추암해변, 촛대바위 전망 구간, 해상 출렁다리는 이용 조건이 서로 다릅니다.',
+    cards: [
+      { title: '추암해변', value: '상시 개방 · 입장 무료', detail: '해변 산책은 연중 가능하며 해수욕 운영 구역과 안전 관리는 계절에 따라 달라집니다.' },
+      { title: '해안산책로 · 출렁다리', value: '안내 시간 09:00–20:00', detail: '한국관광공사 공개 안내 기준. 강풍·높은 파도·시설 점검 시 출입이 제한됩니다.' },
+      { title: '출발 지점과 문의', value: '촛대바위길 28 · 033-530-2801', detail: '다리 방문 안내 주소는 28번지, 추암해변은 26번지입니다. 바위 자체는 추암동 산69로도 표기됩니다.' },
+    ],
+    sources: '한국관광공사 자료 보기', guides: '주차·교통 상세 가이드',
+  },
+  en: {
+    title: 'Three essentials before you go', intro: 'Chuam Beach, the rock viewpoint and the ocean suspension bridge have different access arrangements.',
+    cards: [
+      { title: 'Chuam Beach', value: 'Open year-round · Free', detail: 'The public beach is accessible year-round; supervised swimming areas and facilities operate seasonally.' },
+      { title: 'Ocean trail & suspension bridge', value: 'Published hours 09:00–20:00', detail: 'As listed by VISITKOREA. High winds, waves or maintenance may close the walkway.' },
+      { title: 'Arrival point & contact', value: '28 Chotdaebawi-gil · +82-33-530-2801', detail: 'The bridge entrance uses no. 28, Chuam Beach no. 26; the rock also has a separate hillside parcel address.' },
+    ],
+    sources: 'Read official visitor sources', guides: 'Parking & transport guide',
+  },
+  zh: {
+    title: '出發前先確認的三件事', intro: '湫岩海灘、燭臺岩觀景區與海上吊橋並非完全相同的設施。',
+    cards: [
+      { title: '湫岩海灘', value: '全年開放 · 免費', detail: '公共海岸全年可供散步；海水浴設施與安全管理依季節運作。' },
+      { title: '海岸步道與吊橋', value: '公布時間 09:00–20:00', detail: '依韓國觀光公社公開資訊；強風、巨浪及維修期間可能限制通行。' },
+      { title: '導航地址與電話', value: '燭臺岩路28號 · +82-33-530-2801', detail: '吊橋入口使用28號，海灘資料使用26號，岩石本身另有地籍地址。' },
+    ],
+    sources: '查看官方旅遊資料', guides: '停車與交通指南',
+  },
+  ja: {
+    title: '出発前に確認したい3つの情報', intro: '楚岩ビーチ、燭台岩展望エリア、海上吊橋は利用条件が異なります。',
+    cards: [
+      { title: '楚岩ビーチ', value: '通年開放 · 無料', detail: '公共海岸の散歩は通年可能ですが、遊泳施設・安全管理は季節により異なります。' },
+      { title: '海岸遊歩道・吊橋', value: '掲載時間 09:00–20:00', detail: '韓国観光公社の案内に基づきます。強風・高波・点検時には通行止めになることがあります。' },
+      { title: 'ナビ住所・連絡先', value: '촛대바위길 28 · +82-33-530-2801', detail: '吊橋入口は28番、ビーチは26番。岩自体は別の地番住所もあります。' },
+    ],
+    sources: '公式観光情報を確認', guides: '駐車場・アクセスの詳細',
+  },
+};
+const c = copy[lang] ?? copy.ko;
+---
+<section id="visit-essentials" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mb-8">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold mb-3" style="color: var(--text-primary);">{c.title}</h2>
+      <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{c.intro}</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-4">
+      {c.cards.map((card) => (
+        <article class="rounded-2xl border p-5 h-full" style="background: var(--card-bg); border-color: var(--border-color);">
+          <h3 class="font-semibold mb-2" style="color: var(--text-primary);">{card.title}</h3>
+          <p class="text-lg font-bold mb-2" style="color: var(--accent);">{card.value}</p>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{card.detail}</p>
+        </article>
+      ))}
+    </div>
+    <div class="flex flex-wrap gap-4 mt-6 text-sm">
+      <a href={'/' + lang + '/sources/'} class="underline font-medium" style="color: var(--accent);">{c.sources}</a>
+      <a href={'/' + lang + '/parking-directions/'} class="underline font-medium" style="color: var(--accent);">{c.guides}</a>
+      <a href="https://maps.app.goo.gl/ZZx54T4ET3fkGEBE9" target="_blank" rel="noopener noreferrer" class="underline font-medium" style="color: var(--accent);">Google Maps</a>
+    </div>
+  </div>
+</section>
